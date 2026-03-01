@@ -1,0 +1,10 @@
+^C:\USERS\DPVPD\SOURCE\SUBTITLEGENERATOR\BUILD\CMAKEFILES\6655DDC418630AB1E07FDEF2E677C05F\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dpvpd/source/subtitlegenerator -BC:/Users/dpvpd/source/subtitlegenerator/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/dpvpd/source/subtitlegenerator/build/SubtitleForge.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
