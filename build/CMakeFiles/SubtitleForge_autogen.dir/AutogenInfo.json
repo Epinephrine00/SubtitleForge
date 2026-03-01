@@ -1,72 +1,18 @@
 {
-	"BUILD_DIR" : "C:/Users/dpvpd/source/subtitlegenerator/build/SubtitleForge_autogen",
-	"CMAKE_BINARY_DIR" : "C:/Users/dpvpd/source/subtitlegenerator/build",
-	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/dpvpd/source/subtitlegenerator/build",
-	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/dpvpd/source/subtitlegenerator",
+	"BUILD_DIR" : "C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/dpvpd/source/SubtitleForge/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/dpvpd/source/SubtitleForge/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/dpvpd/source/SubtitleForge",
 	"CMAKE_EXECUTABLE" : "C:/Program Files/CMake/bin/cmake.exe",
 	"CMAKE_LIST_FILES" : 
 	[
-		"C:/Users/dpvpd/source/subtitlegenerator/CMakeLists.txt",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake",
-		"C:/vcpkg/scripts/buildsystems/vcpkg.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDependentOption.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeSystem.cmake.in",
-		"C:/Users/dpvpd/source/subtitlegenerator/build/CMakeFiles/3.28.0/CMakeSystem.cmake",
+		"C:/Users/dpvpd/source/SubtitleForge/CMakeLists.txt",
+		"C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/3.28.0/CMakeSystem.cmake",
 		"C:/vcpkg/scripts/buildsystems/vcpkg.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDependentOption.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Platform/Windows-Determine-CXX.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CompilerId/VS-10.vcxproj.in",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in",
-		"C:/Users/dpvpd/source/subtitlegenerator/build/CMakeFiles/3.28.0/CMakeCXXCompiler.cmake",
+		"C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/3.28.0/CMakeCXXCompiler.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeGenericSystem.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake",
@@ -79,24 +25,9 @@
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/Platform/Windows-MSVC-CXX.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/Platform/Windows-MSVC.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineRCCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeRCCompiler.cmake.in",
-		"C:/Users/dpvpd/source/subtitlegenerator/build/CMakeFiles/3.28.0/CMakeRCCompiler.cmake",
+		"C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/3.28.0/CMakeRCCompiler.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeRCInformation.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestRCCompiler.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in",
-		"C:/Users/dpvpd/source/subtitlegenerator/build/CMakeFiles/3.28.0/CMakeCXXCompiler.cmake",
 		"C:/vcpkg/installed/x64-windows/share/Qt6/Qt6ConfigVersion.cmake",
 		"C:/vcpkg/installed/x64-windows/share/Qt6/Qt6ConfigVersionImpl.cmake",
 		"C:/vcpkg/installed/x64-windows/share/Qt6/Qt6Config.cmake",
@@ -401,109 +332,109 @@
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/FindPkgConfig.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/FindPackageMessage.cmake",
-		"C:/Users/dpvpd/source/subtitlegenerator/resources/resources.qrc"
+		"C:/Users/dpvpd/source/SubtitleForge/resources/resources.qrc"
 	],
-	"CMAKE_SOURCE_DIR" : "C:/Users/dpvpd/source/subtitlegenerator",
+	"CMAKE_SOURCE_DIR" : "C:/Users/dpvpd/source/SubtitleForge",
 	"DEP_FILE" : "",
 	"DEP_FILE_RULE_NAME" : "",
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/app/mainwindow.h",
+			"C:/Users/dpvpd/source/SubtitleForge/src/app/mainwindow.h",
 			"Mu",
 			"ISMKEKEPX5/moc_mainwindow.cpp",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/audio/audiodecoder.h",
+			"C:/Users/dpvpd/source/SubtitleForge/src/audio/audiodecoder.h",
 			"Mu",
 			"MYYQ2Y7GGF/moc_audiodecoder.cpp",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/audio/audioplayback.h",
+			"C:/Users/dpvpd/source/SubtitleForge/src/audio/audioplayback.h",
 			"Mu",
 			"MYYQ2Y7GGF/moc_audioplayback.cpp",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/io/projectio.h",
+			"C:/Users/dpvpd/source/SubtitleForge/src/io/projectio.h",
 			"Mu",
 			"F43WJJHJFQ/moc_projectio.cpp",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/model/animationengine.h",
+			"C:/Users/dpvpd/source/SubtitleForge/src/model/animationengine.h",
 			"Mu",
 			"VNQA4LF4BW/moc_animationengine.cpp",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/model/project.h",
+			"C:/Users/dpvpd/source/SubtitleForge/src/model/project.h",
 			"Mu",
 			"VNQA4LF4BW/moc_project.cpp",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/model/subtitle.h",
+			"C:/Users/dpvpd/source/SubtitleForge/src/model/subtitle.h",
 			"Mu",
 			"VNQA4LF4BW/moc_subtitle.cpp",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/model/subtitleeffect.h",
+			"C:/Users/dpvpd/source/SubtitleForge/src/model/subtitleeffect.h",
 			"Mu",
 			"VNQA4LF4BW/moc_subtitleeffect.cpp",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/model/subtitlerenderer.h",
+			"C:/Users/dpvpd/source/SubtitleForge/src/model/subtitlerenderer.h",
 			"Mu",
 			"VNQA4LF4BW/moc_subtitlerenderer.cpp",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/video/videoexporter.h",
+			"C:/Users/dpvpd/source/SubtitleForge/src/video/videoexporter.h",
 			"Mu",
 			"DWCH7LOILJ/moc_videoexporter.cpp",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/widgets/effectspanel.h",
+			"C:/Users/dpvpd/source/SubtitleForge/src/widgets/effectspanel.h",
 			"Mu",
 			"RZ4CM6YYJ6/moc_effectspanel.cpp",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/widgets/previewwidget.h",
+			"C:/Users/dpvpd/source/SubtitleForge/src/widgets/previewwidget.h",
 			"Mu",
 			"RZ4CM6YYJ6/moc_previewwidget.cpp",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/widgets/textinputpanel.h",
+			"C:/Users/dpvpd/source/SubtitleForge/src/widgets/textinputpanel.h",
 			"Mu",
 			"RZ4CM6YYJ6/moc_textinputpanel.cpp",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/widgets/timelinewidget.h",
+			"C:/Users/dpvpd/source/SubtitleForge/src/widgets/timelinewidget.h",
 			"Mu",
 			"RZ4CM6YYJ6/moc_timelinewidget.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "C:/Users/dpvpd/source/subtitlegenerator/build/SubtitleForge_autogen/include",
-	"INCLUDE_DIR_Debug" : "C:/Users/dpvpd/source/subtitlegenerator/build/SubtitleForge_autogen/include_Debug",
-	"INCLUDE_DIR_MinSizeRel" : "C:/Users/dpvpd/source/subtitlegenerator/build/SubtitleForge_autogen/include_MinSizeRel",
-	"INCLUDE_DIR_RelWithDebInfo" : "C:/Users/dpvpd/source/subtitlegenerator/build/SubtitleForge_autogen/include_RelWithDebInfo",
-	"INCLUDE_DIR_Release" : "C:/Users/dpvpd/source/subtitlegenerator/build/SubtitleForge_autogen/include_Release",
-	"MOC_COMPILATION_FILE" : "C:/Users/dpvpd/source/subtitlegenerator/build/SubtitleForge_autogen/mocs_compilation.cpp",
-	"MOC_COMPILATION_FILE_Debug" : "C:/Users/dpvpd/source/subtitlegenerator/build/SubtitleForge_autogen/mocs_compilation_Debug.cpp",
-	"MOC_COMPILATION_FILE_MinSizeRel" : "C:/Users/dpvpd/source/subtitlegenerator/build/SubtitleForge_autogen/mocs_compilation_MinSizeRel.cpp",
-	"MOC_COMPILATION_FILE_RelWithDebInfo" : "C:/Users/dpvpd/source/subtitlegenerator/build/SubtitleForge_autogen/mocs_compilation_RelWithDebInfo.cpp",
-	"MOC_COMPILATION_FILE_Release" : "C:/Users/dpvpd/source/subtitlegenerator/build/SubtitleForge_autogen/mocs_compilation_Release.cpp",
+	"INCLUDE_DIR" : "C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge_autogen/include",
+	"INCLUDE_DIR_Debug" : "C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge_autogen/include_Debug",
+	"INCLUDE_DIR_MinSizeRel" : "C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge_autogen/include_MinSizeRel",
+	"INCLUDE_DIR_RelWithDebInfo" : "C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge_autogen/include_RelWithDebInfo",
+	"INCLUDE_DIR_Release" : "C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge_autogen/include_Release",
+	"MOC_COMPILATION_FILE" : "C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge_autogen/mocs_compilation.cpp",
+	"MOC_COMPILATION_FILE_Debug" : "C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge_autogen/mocs_compilation_Debug.cpp",
+	"MOC_COMPILATION_FILE_MinSizeRel" : "C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge_autogen/mocs_compilation_MinSizeRel.cpp",
+	"MOC_COMPILATION_FILE_RelWithDebInfo" : "C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge_autogen/mocs_compilation_RelWithDebInfo.cpp",
+	"MOC_COMPILATION_FILE_Release" : "C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge_autogen/mocs_compilation_Release.cpp",
 	"MOC_DEFINITIONS" : [],
 	"MOC_DEFINITIONS_Debug" : 
 	[
@@ -574,7 +505,7 @@
 	"MOC_INCLUDES" : [],
 	"MOC_INCLUDES_Debug" : 
 	[
-		"C:/Users/dpvpd/source/subtitlegenerator/src",
+		"C:/Users/dpvpd/source/SubtitleForge/src",
 		"C:/vcpkg/installed/x64-windows/include/Qt6/QtWidgets",
 		"C:/vcpkg/installed/x64-windows/include/Qt6",
 		"C:/vcpkg/installed/x64-windows/include/Qt6/QtCore",
@@ -586,7 +517,7 @@
 	],
 	"MOC_INCLUDES_MinSizeRel" : 
 	[
-		"C:/Users/dpvpd/source/subtitlegenerator/src",
+		"C:/Users/dpvpd/source/SubtitleForge/src",
 		"C:/vcpkg/installed/x64-windows/include/Qt6/QtWidgets",
 		"C:/vcpkg/installed/x64-windows/include/Qt6",
 		"C:/vcpkg/installed/x64-windows/include/Qt6/QtCore",
@@ -598,7 +529,7 @@
 	],
 	"MOC_INCLUDES_RelWithDebInfo" : 
 	[
-		"C:/Users/dpvpd/source/subtitlegenerator/src",
+		"C:/Users/dpvpd/source/SubtitleForge/src",
 		"C:/vcpkg/installed/x64-windows/include/Qt6/QtWidgets",
 		"C:/vcpkg/installed/x64-windows/include/Qt6",
 		"C:/vcpkg/installed/x64-windows/include/Qt6/QtCore",
@@ -610,7 +541,7 @@
 	],
 	"MOC_INCLUDES_Release" : 
 	[
-		"C:/Users/dpvpd/source/subtitlegenerator/src",
+		"C:/Users/dpvpd/source/SubtitleForge/src",
 		"C:/vcpkg/installed/x64-windows/include/Qt6/QtWidgets",
 		"C:/vcpkg/installed/x64-windows/include/Qt6",
 		"C:/vcpkg/installed/x64-windows/include/Qt6/QtCore",
@@ -637,90 +568,90 @@
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : true,
 	"PARALLEL" : 16,
-	"PARSE_CACHE_FILE" : "C:/Users/dpvpd/source/subtitlegenerator/build/CMakeFiles/SubtitleForge_autogen.dir/ParseCache.txt",
-	"PARSE_CACHE_FILE_Debug" : "C:/Users/dpvpd/source/subtitlegenerator/build/CMakeFiles/SubtitleForge_autogen.dir/ParseCache_Debug.txt",
-	"PARSE_CACHE_FILE_MinSizeRel" : "C:/Users/dpvpd/source/subtitlegenerator/build/CMakeFiles/SubtitleForge_autogen.dir/ParseCache_MinSizeRel.txt",
-	"PARSE_CACHE_FILE_RelWithDebInfo" : "C:/Users/dpvpd/source/subtitlegenerator/build/CMakeFiles/SubtitleForge_autogen.dir/ParseCache_RelWithDebInfo.txt",
-	"PARSE_CACHE_FILE_Release" : "C:/Users/dpvpd/source/subtitlegenerator/build/CMakeFiles/SubtitleForge_autogen.dir/ParseCache_Release.txt",
+	"PARSE_CACHE_FILE" : "C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/SubtitleForge_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE_Debug" : "C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/SubtitleForge_autogen.dir/ParseCache_Debug.txt",
+	"PARSE_CACHE_FILE_MinSizeRel" : "C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/SubtitleForge_autogen.dir/ParseCache_MinSizeRel.txt",
+	"PARSE_CACHE_FILE_RelWithDebInfo" : "C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/SubtitleForge_autogen.dir/ParseCache_RelWithDebInfo.txt",
+	"PARSE_CACHE_FILE_Release" : "C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/SubtitleForge_autogen.dir/ParseCache_Release.txt",
 	"QT_MOC_EXECUTABLE" : "C:/vcpkg/installed/x64-windows/tools/Qt6/bin/moc.exe",
 	"QT_UIC_EXECUTABLE" : "",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 10,
-	"SETTINGS_FILE" : "C:/Users/dpvpd/source/subtitlegenerator/build/CMakeFiles/SubtitleForge_autogen.dir/AutogenUsed.txt",
-	"SETTINGS_FILE_Debug" : "C:/Users/dpvpd/source/subtitlegenerator/build/CMakeFiles/SubtitleForge_autogen.dir/AutogenUsed_Debug.txt",
-	"SETTINGS_FILE_MinSizeRel" : "C:/Users/dpvpd/source/subtitlegenerator/build/CMakeFiles/SubtitleForge_autogen.dir/AutogenUsed_MinSizeRel.txt",
-	"SETTINGS_FILE_RelWithDebInfo" : "C:/Users/dpvpd/source/subtitlegenerator/build/CMakeFiles/SubtitleForge_autogen.dir/AutogenUsed_RelWithDebInfo.txt",
-	"SETTINGS_FILE_Release" : "C:/Users/dpvpd/source/subtitlegenerator/build/CMakeFiles/SubtitleForge_autogen.dir/AutogenUsed_Release.txt",
+	"SETTINGS_FILE" : "C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/SubtitleForge_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE_Debug" : "C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/SubtitleForge_autogen.dir/AutogenUsed_Debug.txt",
+	"SETTINGS_FILE_MinSizeRel" : "C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/SubtitleForge_autogen.dir/AutogenUsed_MinSizeRel.txt",
+	"SETTINGS_FILE_RelWithDebInfo" : "C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/SubtitleForge_autogen.dir/AutogenUsed_RelWithDebInfo.txt",
+	"SETTINGS_FILE_Release" : "C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/SubtitleForge_autogen.dir/AutogenUsed_Release.txt",
 	"SOURCES" : 
 	[
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/app/mainwindow.cpp",
+			"C:/Users/dpvpd/source/SubtitleForge/src/app/mainwindow.cpp",
 			"Mu",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/audio/audiodecoder.cpp",
+			"C:/Users/dpvpd/source/SubtitleForge/src/audio/audiodecoder.cpp",
 			"Mu",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/audio/audioplayback.cpp",
+			"C:/Users/dpvpd/source/SubtitleForge/src/audio/audioplayback.cpp",
 			"Mu",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/io/projectio.cpp",
+			"C:/Users/dpvpd/source/SubtitleForge/src/io/projectio.cpp",
 			"Mu",
 			null
 		],
-		[ "C:/Users/dpvpd/source/subtitlegenerator/src/main.cpp", "Mu", null ],
+		[ "C:/Users/dpvpd/source/SubtitleForge/src/main.cpp", "Mu", null ],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/model/animationengine.cpp",
-			"Mu",
-			null
-		],
-		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/model/project.cpp",
+			"C:/Users/dpvpd/source/SubtitleForge/src/model/animationengine.cpp",
 			"Mu",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/model/subtitle.cpp",
+			"C:/Users/dpvpd/source/SubtitleForge/src/model/project.cpp",
 			"Mu",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/model/subtitleeffect.cpp",
+			"C:/Users/dpvpd/source/SubtitleForge/src/model/subtitle.cpp",
 			"Mu",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/model/subtitlerenderer.cpp",
+			"C:/Users/dpvpd/source/SubtitleForge/src/model/subtitleeffect.cpp",
 			"Mu",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/video/videoexporter.cpp",
+			"C:/Users/dpvpd/source/SubtitleForge/src/model/subtitlerenderer.cpp",
 			"Mu",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/widgets/effectspanel.cpp",
+			"C:/Users/dpvpd/source/SubtitleForge/src/video/videoexporter.cpp",
 			"Mu",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/widgets/previewwidget.cpp",
+			"C:/Users/dpvpd/source/SubtitleForge/src/widgets/effectspanel.cpp",
 			"Mu",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/widgets/textinputpanel.cpp",
+			"C:/Users/dpvpd/source/SubtitleForge/src/widgets/previewwidget.cpp",
 			"Mu",
 			null
 		],
 		[
-			"C:/Users/dpvpd/source/subtitlegenerator/src/widgets/timelinewidget.cpp",
+			"C:/Users/dpvpd/source/SubtitleForge/src/widgets/textinputpanel.cpp",
+			"Mu",
+			null
+		],
+		[
+			"C:/Users/dpvpd/source/SubtitleForge/src/widgets/timelinewidget.cpp",
 			"Mu",
 			null
 		]

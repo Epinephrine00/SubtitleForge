@@ -11,6 +11,11 @@ public:
     explicit AudioPlayback(QObject *parent = nullptr);
 
     void loadFile(const QString &path);
+
+    // Volume 0.0 (mute) .. 1.0 (full). Persisted via QSettings across app restarts.
+    void setVolume(float linear);
+    float volume() const { return m_volume; }
+
     void play();
     void pause();
     void togglePlayPause();
@@ -33,6 +38,7 @@ private:
     QMediaPlayer *m_player      = nullptr;
     QAudioOutput *m_audioOutput = nullptr;
     int           m_fps         = 30;
+    float         m_volume      = 1.0f;
 
 public:
     void setFps(int fps) { m_fps = fps; }

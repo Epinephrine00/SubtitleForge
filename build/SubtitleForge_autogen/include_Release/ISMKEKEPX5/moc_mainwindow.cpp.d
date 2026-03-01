@@ -1,9 +1,9 @@
-C:/Users/dpvpd/source/subtitlegenerator/build/SubtitleForge_autogen/include_Release/ISMKEKEPX5/moc_mainwindow.cpp: C:/Users/dpvpd/source/subtitlegenerator/src/app/mainwindow.h \
-  C:/Users/dpvpd/source/subtitlegenerator/src/audio/audiodecoder.h \
-  C:/Users/dpvpd/source/subtitlegenerator/src/audio/audioplayback.h \
-  C:/Users/dpvpd/source/subtitlegenerator/src/model/project.h \
-  C:/Users/dpvpd/source/subtitlegenerator/src/model/subtitle.h \
-  C:/Users/dpvpd/source/subtitlegenerator/src/model/subtitleeffect.h \
+C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge_autogen/include_Release/ISMKEKEPX5/moc_mainwindow.cpp: C:/Users/dpvpd/source/SubtitleForge/src/app/mainwindow.h \
+  C:/Users/dpvpd/source/SubtitleForge/src/audio/audiodecoder.h \
+  C:/Users/dpvpd/source/SubtitleForge/src/audio/audioplayback.h \
+  C:/Users/dpvpd/source/SubtitleForge/src/model/project.h \
+  C:/Users/dpvpd/source/SubtitleForge/src/model/subtitle.h \
+  C:/Users/dpvpd/source/SubtitleForge/src/model/subtitleeffect.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/QJsonObject \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/QObject \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/QString \

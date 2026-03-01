@@ -1,4 +1,4 @@
-C:/Users/dpvpd/source/subtitlegenerator/build/SubtitleForge_autogen/include_Release/MYYQ2Y7GGF/moc_audioplayback.cpp: C:/Users/dpvpd/source/subtitlegenerator/src/audio/audioplayback.h \
+C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge_autogen/include_Release/MYYQ2Y7GGF/moc_audioplayback.cpp: C:/Users/dpvpd/source/SubtitleForge/src/audio/audioplayback.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/QObject \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/QTimer \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/q17memory.h \

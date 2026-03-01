@@ -1,6 +1,6 @@
-C:/Users/dpvpd/source/subtitlegenerator/build/SubtitleForge_autogen/include_Release/RZ4CM6YYJ6/moc_timelinewidget.cpp: C:/Users/dpvpd/source/subtitlegenerator/src/widgets/timelinewidget.h \
-  C:/Users/dpvpd/source/subtitlegenerator/src/audio/audiodecoder.h \
-  C:/Users/dpvpd/source/subtitlegenerator/src/model/subtitle.h \
+C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge_autogen/include_Release/RZ4CM6YYJ6/moc_timelinewidget.cpp: C:/Users/dpvpd/source/SubtitleForge/src/widgets/timelinewidget.h \
+  C:/Users/dpvpd/source/SubtitleForge/src/audio/audiodecoder.h \
+  C:/Users/dpvpd/source/SubtitleForge/src/model/subtitle.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/QJsonObject \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/QString \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/QVector \

@@ -1,129 +1,129 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\dpvpd\source\subtitlegenerator\build\SubtitleForge_autogen\mocs_compilation_Debug.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge_autogen\mocs_compilation_Debug.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\subtitlegenerator\src\main.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\subtitlegenerator\src\app\mainwindow.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\app\mainwindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\subtitlegenerator\src\model\subtitle.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\model\subtitle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\subtitlegenerator\src\model\subtitleeffect.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\model\subtitleeffect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\subtitlegenerator\src\model\project.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\model\project.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\subtitlegenerator\src\model\animationengine.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\model\animationengine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\subtitlegenerator\src\model\subtitlerenderer.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\model\subtitlerenderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\subtitlegenerator\src\widgets\textinputpanel.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\widgets\textinputpanel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\subtitlegenerator\src\widgets\effectspanel.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\widgets\effectspanel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\subtitlegenerator\src\widgets\timelinewidget.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\widgets\timelinewidget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\subtitlegenerator\src\widgets\previewwidget.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\widgets\previewwidget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\subtitlegenerator\src\audio\audiodecoder.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\audio\audiodecoder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\subtitlegenerator\src\audio\audioplayback.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\audio\audioplayback.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\subtitlegenerator\src\video\videoexporter.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\video\videoexporter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\subtitlegenerator\src\io\projectio.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\io\projectio.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\subtitlegenerator\build\SubtitleForge_autogen\3YJK5W5UP7\qrc_resources.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge_autogen\3YJK5W5UP7\qrc_resources.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\subtitlegenerator\build\SubtitleForge_autogen\mocs_compilation_Release.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge_autogen\mocs_compilation_Release.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\subtitlegenerator\build\SubtitleForge_autogen\mocs_compilation_MinSizeRel.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge_autogen\mocs_compilation_MinSizeRel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\subtitlegenerator\build\SubtitleForge_autogen\mocs_compilation_RelWithDebInfo.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge_autogen\mocs_compilation_RelWithDebInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\dpvpd\source\subtitlegenerator\src\app\mainwindow.h">
+    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\app\mainwindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\subtitlegenerator\src\model\subtitle.h">
+    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\model\subtitle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\subtitlegenerator\src\model\subtitleeffect.h">
+    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\model\subtitleeffect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\subtitlegenerator\src\model\project.h">
+    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\model\project.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\subtitlegenerator\src\model\animationengine.h">
+    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\model\animationengine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\subtitlegenerator\src\model\subtitlerenderer.h">
+    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\model\subtitlerenderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\subtitlegenerator\src\widgets\textinputpanel.h">
+    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\widgets\textinputpanel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\subtitlegenerator\src\widgets\effectspanel.h">
+    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\widgets\effectspanel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\subtitlegenerator\src\widgets\timelinewidget.h">
+    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\widgets\timelinewidget.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\subtitlegenerator\src\widgets\previewwidget.h">
+    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\widgets\previewwidget.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\subtitlegenerator\src\audio\audiodecoder.h">
+    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\audio\audiodecoder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\subtitlegenerator\src\audio\audioplayback.h">
+    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\audio\audioplayback.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\subtitlegenerator\src\video\videoexporter.h">
+    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\video\videoexporter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\subtitlegenerator\src\io\projectio.h">
+    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\io\projectio.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\dpvpd\source\subtitlegenerator\build\CMakeFiles\f33f8d0ba05dce769568838a8f0098cc\qrc_resources.cpp.rule">
+    <CustomBuild Include="C:\Users\dpvpd\source\SubtitleForge\build\CMakeFiles\db2770b7ebd3665bdb2b4fc3f63abf2d\qrc_resources.cpp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\dpvpd\source\subtitlegenerator\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\dpvpd\source\SubtitleForge\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\dpvpd\source\subtitlegenerator\resources\resources.qrc" />
+    <None Include="C:\Users\dpvpd\source\SubtitleForge\resources\resources.qrc" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{6C78DB1F-23C0-370C-97AE-C0DF7D254C11}</UniqueIdentifier>
+      <UniqueIdentifier>{3B6CD198-74C3-3AA7-AC6B-C895EC5ECC31}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{2E3846C2-113C-3BBB-A4E2-1235C36E91C7}</UniqueIdentifier>
+      <UniqueIdentifier>{AC7F3EF6-A64D-378F-8ADC-FE0B9FD16F8D}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{9F92341A-5D97-388C-AD75-4AADDF71192C}</UniqueIdentifier>
+      <UniqueIdentifier>{159F4E63-1295-339B-B77A-C716B3FC55F8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

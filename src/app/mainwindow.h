@@ -83,8 +83,9 @@ private:
     TimelineWidget *m_timeline    = nullptr;
     PreviewWidget  *m_preview     = nullptr;
 
-    QComboBox *m_fpsCombo = nullptr;
-    QComboBox *m_resCombo = nullptr;
+    QComboBox *m_fpsCombo   = nullptr;
+    QComboBox *m_resCombo  = nullptr;
+    class QSlider *m_volumeSlider = nullptr;
 
     QTimer *m_refreshTimer = nullptr;
     qint64  m_currentFrame = 0;

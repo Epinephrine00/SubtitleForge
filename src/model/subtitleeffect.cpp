@@ -49,10 +49,11 @@ SubtitleEffect SubtitleEffect::createDefault()
     e.fadeDurationFrames = 12;
 
     e.intro.enabled  = false;
-    e.intro.opacity  = 0.0f;
+    e.intro.opacity  = 100.0f;  // visible when enabled (was 0 → invisible in alpha export)
     e.intro.blur     = 10.0f;
 
     e.approach.enabled = false;
+    e.approach.opacity = 100.0f;
 
     e.focus.enabled  = true;
     e.focus.posX     = 0.0f;
@@ -63,9 +64,10 @@ SubtitleEffect SubtitleEffect::createDefault()
     e.focus.fontSize = 48.0f;
 
     e.recede.enabled = false;
+    e.recede.opacity = 100.0f;
 
     e.outro.enabled  = false;
-    e.outro.opacity  = 0.0f;
+    e.outro.opacity  = 100.0f;  // visible when enabled (was 0 → invisible in alpha export)
     e.outro.blur     = 10.0f;
 
     return e;
@@ -92,5 +94,12 @@ SubtitleEffect SubtitleEffect::fromJson(const QJsonObject &o)
     e.focus    = StageParams::fromJson(o["focus"].toObject());
     e.recede   = StageParams::fromJson(o["recede"].toObject());
     e.outro    = StageParams::fromJson(o["outro"].toObject());
+
+    // Migration: enabled non-focus stages with opacity 0 were invisible in alpha export
+    if (e.intro.enabled    && e.intro.opacity <= 0.0f)    e.intro.opacity = 100.0f;
+    if (e.approach.enabled && e.approach.opacity <= 0.0f) e.approach.opacity = 100.0f;
+    if (e.recede.enabled   && e.recede.opacity <= 0.0f)    e.recede.opacity = 100.0f;
+    if (e.outro.enabled    && e.outro.opacity <= 0.0f)    e.outro.opacity = 100.0f;
+
     return e;
 }

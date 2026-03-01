@@ -1,16 +1,16 @@
-^C:\USERS\DPVPD\SOURCE\SUBTITLEGENERATOR\BUILD\CMAKEFILES\F33F8D0BA05DCE769568838A8F0098CC\QRC_RESOURCES.CPP.RULE
+^C:\USERS\DPVPD\SOURCE\SUBTITLEFORGE\BUILD\CMAKEFILES\DB2770B7EBD3665BDB2B4FC3F63ABF2D\QRC_RESOURCES.CPP.RULE
 setlocal
-cd C:\Users\dpvpd\source\subtitlegenerator\build
+cd C:\Users\dpvpd\source\SubtitleForge\build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autorcc C:/Users/dpvpd/source/subtitlegenerator/build/CMakeFiles/SubtitleForge_autogen.dir/AutoRcc_resources_3YJK5W5UP7_Info.json Debug
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autorcc C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/SubtitleForge_autogen.dir/AutoRcc_resources_3YJK5W5UP7_Info.json Debug
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autorcc C:/Users/dpvpd/source/subtitlegenerator/build/CMakeFiles/SubtitleForge_autogen.dir/AutoRcc_resources_3YJK5W5UP7_Info.json Release
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autorcc C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/SubtitleForge_autogen.dir/AutoRcc_resources_3YJK5W5UP7_Info.json Release
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autorcc C:/Users/dpvpd/source/subtitlegenerator/build/CMakeFiles/SubtitleForge_autogen.dir/AutoRcc_resources_3YJK5W5UP7_Info.json MinSizeRel
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autorcc C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/SubtitleForge_autogen.dir/AutoRcc_resources_3YJK5W5UP7_Info.json MinSizeRel
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autorcc C:/Users/dpvpd/source/subtitlegenerator/build/CMakeFiles/SubtitleForge_autogen.dir/AutoRcc_resources_3YJK5W5UP7_Info.json RelWithDebInfo
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autorcc C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/SubtitleForge_autogen.dir/AutoRcc_resources_3YJK5W5UP7_Info.json RelWithDebInfo
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -18,9 +18,9 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\DPVPD\SOURCE\SUBTITLEGENERATOR\CMAKELISTS.TXT
+^C:\USERS\DPVPD\SOURCE\SUBTITLEFORGE\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dpvpd/source/subtitlegenerator -BC:/Users/dpvpd/source/subtitlegenerator/build --check-stamp-file C:/Users/dpvpd/source/subtitlegenerator/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dpvpd/source/SubtitleForge -BC:/Users/dpvpd/source/SubtitleForge/build --check-stamp-file C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

@@ -1,4 +1,15 @@
 cmake_minimum_required(VERSION 3.20)
+
+# vcpkg post-build (applocal.ps1) needs powershell.exe; MSBuild often has no PATH to it.
+# Use full path so the next configure+generate gets a working PostBuildEvent.
+if(WIN32 AND DEFINED ENV{SystemRoot})
+  set(_ps "$ENV{SystemRoot}/System32/WindowsPowerShell/v1.0/powershell.exe")
+  if(EXISTS "${_ps}")
+    set(Z_VCPKG_POWERSHELL_PATH "${_ps}" CACHE INTERNAL "PowerShell for vcpkg applocal" FORCE)
+  endif()
+  unset(_ps)
+endif()
+
 project(SubtitleForge VERSION 1.0.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)

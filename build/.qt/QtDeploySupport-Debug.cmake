@@ -35,7 +35,7 @@ set(__QT_DEPLOY_SYSTEM_NAME "Windows")
 set(__QT_DEPLOY_SHARED_LIBRARY_SUFFIX ".dll")
 set(__QT_DEPLOY_IS_SHARED_LIBS_BUILD "ON")
 set(__QT_DEPLOY_TOOL "C:/vcpkg/installed/x64-windows/tools/Qt6/bin/windeployqt.debug.bat")
-set(__QT_DEPLOY_IMPL_DIR "C:/Users/dpvpd/source/subtitlegenerator/build/.qt")
+set(__QT_DEPLOY_IMPL_DIR "C:/Users/dpvpd/source/SubtitleForge/build/.qt")
 set(__QT_DEPLOY_VERBOSE "")
 set(__QT_CMAKE_EXPORT_NAMESPACE "Qt6")
 set(__QT_LIBINFIX "")
@@ -60,7 +60,7 @@ set(__QT_DEPLOY_QT_DEBUG_POSTFIX "")
 
 # Define the CMake commands to be made available during deployment.
 set(__qt_deploy_support_files
-    "C:/Users/dpvpd/source/subtitlegenerator/build/.qt/QtDeployTargets-Debug.cmake"
+    "C:/Users/dpvpd/source/SubtitleForge/build/.qt/QtDeployTargets-Debug.cmake"
     "C:/vcpkg/installed/x64-windows/share/Qt6Core/Qt6CoreDeploySupport.cmake"
 )
 foreach(__qt_deploy_support_file IN LISTS __qt_deploy_support_files)

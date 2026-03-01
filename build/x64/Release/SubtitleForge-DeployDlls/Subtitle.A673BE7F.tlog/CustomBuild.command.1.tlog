@@ -1,0 +1,20 @@
+^C:\USERS\DPVPD\SOURCE\SUBTITLEFORGE\BUILD\CMAKEFILES\45F03A1C123F76075035490AF1362DF2\SUBTITLEFORGE-DEPLOYDLLS.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/vcpkg/installed/x64-windows/bin C:/Users/dpvpd/source/SubtitleForge/build/Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\DPVPD\SOURCE\SUBTITLEFORGE\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dpvpd/source/SubtitleForge -BC:/Users/dpvpd/source/SubtitleForge/build --check-stamp-file C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

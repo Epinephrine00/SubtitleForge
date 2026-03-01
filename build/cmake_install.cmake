@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/dpvpd/source/subtitlegenerator
+# Install script for directory: C:/Users/dpvpd/source/SubtitleForge
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/dpvpd/source/subtitlegenerator/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/dpvpd/source/SubtitleForge/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

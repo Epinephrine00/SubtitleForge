@@ -1,0 +1,17 @@
+C:\Users\dpvpd\source\SubtitleForge\src\main.cpp;C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge.dir\Release\main.obj
+C:\Users\dpvpd\source\SubtitleForge\src\app\mainwindow.cpp;C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge.dir\Release\mainwindow.obj
+C:\Users\dpvpd\source\SubtitleForge\src\model\subtitle.cpp;C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge.dir\Release\subtitle.obj
+C:\Users\dpvpd\source\SubtitleForge\src\model\subtitleeffect.cpp;C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge.dir\Release\subtitleeffect.obj
+C:\Users\dpvpd\source\SubtitleForge\src\model\project.cpp;C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge.dir\Release\project.obj
+C:\Users\dpvpd\source\SubtitleForge\src\model\animationengine.cpp;C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge.dir\Release\animationengine.obj
+C:\Users\dpvpd\source\SubtitleForge\src\model\subtitlerenderer.cpp;C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge.dir\Release\subtitlerenderer.obj
+C:\Users\dpvpd\source\SubtitleForge\src\widgets\textinputpanel.cpp;C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge.dir\Release\textinputpanel.obj
+C:\Users\dpvpd\source\SubtitleForge\src\widgets\effectspanel.cpp;C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge.dir\Release\effectspanel.obj
+C:\Users\dpvpd\source\SubtitleForge\src\widgets\timelinewidget.cpp;C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge.dir\Release\timelinewidget.obj
+C:\Users\dpvpd\source\SubtitleForge\src\widgets\previewwidget.cpp;C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge.dir\Release\previewwidget.obj
+C:\Users\dpvpd\source\SubtitleForge\src\audio\audiodecoder.cpp;C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge.dir\Release\audiodecoder.obj
+C:\Users\dpvpd\source\SubtitleForge\src\audio\audioplayback.cpp;C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge.dir\Release\audioplayback.obj
+C:\Users\dpvpd\source\SubtitleForge\src\video\videoexporter.cpp;C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge.dir\Release\videoexporter.obj
+C:\Users\dpvpd\source\SubtitleForge\src\io\projectio.cpp;C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge.dir\Release\projectio.obj
+C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge_autogen\3YJK5W5UP7\qrc_resources.cpp;C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge.dir\Release\qrc_resources.obj
+C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge_autogen\mocs_compilation_Release.cpp;C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge.dir\Release\mocs_compilation_Release.obj

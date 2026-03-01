@@ -25,6 +25,8 @@
 #include <QLineEdit>
 #include <QAbstractSpinBox>
 #include <QKeyEvent>
+#include <QSlider>
+#include <QSettings>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -75,6 +77,12 @@ void MainWindow::setupUi()
     m_resCombo->addItem("2160p (3840\u00d72160)",  QSize(3840, 2160));
     m_resCombo->setCurrentIndex(1);
     settingsForm->addRow("Resolution:", m_resCombo);
+
+    m_volumeSlider = new QSlider(Qt::Horizontal);
+    m_volumeSlider->setRange(0, 100);
+    m_volumeSlider->setValue(static_cast<int>(m_audio->volume() * 100));
+    m_volumeSlider->setToolTip("Audio volume (saved across sessions)");
+    settingsForm->addRow("Volume:", m_volumeSlider);
 
     // Left column: text panel + settings
     auto *leftColumn = new QWidget;
@@ -151,6 +159,9 @@ void MainWindow::connectSignals()
             this, &MainWindow::onProjectFpsChanged);
     connect(m_resCombo, QOverload<int>::of(&QComboBox::currentIndexChanged),
             this, &MainWindow::onProjectResolutionChanged);
+    connect(m_volumeSlider, &QSlider::valueChanged, this, [this](int value) {
+        m_audio->setVolume(value / 100.0f);
+    });
 }
 
 // ---------- menu actions ---------------------------------------------------

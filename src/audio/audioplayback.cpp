@@ -1,5 +1,8 @@
 #include "audio/audioplayback.h"
 #include <QUrl>
+#include <QSettings>
+
+static const char kAudioVolumeKey[] = "audio/volume";
 
 AudioPlayback::AudioPlayback(QObject *parent)
     : QObject(parent)
@@ -7,6 +10,10 @@ AudioPlayback::AudioPlayback(QObject *parent)
     , m_audioOutput(new QAudioOutput(this))
 {
     m_player->setAudioOutput(m_audioOutput);
+
+    m_volume = static_cast<float>(QSettings().value(kAudioVolumeKey, 1.0).toDouble());
+    m_volume = std::clamp(m_volume, 0.0f, 1.0f);
+    m_audioOutput->setVolume(m_volume);
 
     connect(m_player, &QMediaPlayer::positionChanged,
             this, &AudioPlayback::onMediaPositionChanged);
@@ -19,6 +26,14 @@ AudioPlayback::AudioPlayback(QObject *parent)
 void AudioPlayback::loadFile(const QString &path)
 {
     m_player->setSource(QUrl::fromLocalFile(path));
+    m_audioOutput->setVolume(m_volume);
+}
+
+void AudioPlayback::setVolume(float linear)
+{
+    m_volume = std::clamp(linear, 0.0f, 1.0f);
+    m_audioOutput->setVolume(m_volume);
+    QSettings().setValue(kAudioVolumeKey, static_cast<double>(m_volume));
 }
 
 void AudioPlayback::play()
