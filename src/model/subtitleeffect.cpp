@@ -48,11 +48,13 @@ SubtitleEffect SubtitleEffect::createDefault()
     SubtitleEffect e;
     e.fadeDurationFrames = 12;
 
-    e.intro.enabled  = false;
-    e.intro.opacity  = 100.0f;  // visible when enabled (was 0 → invisible in alpha export)
+    // Intro/Approach/Recede/Outro enabled by default so full animation is visible
+    // (including in MOV alpha export); user can disable per-stage in Effects panel.
+    e.intro.enabled  = true;
+    e.intro.opacity  = 100.0f;
     e.intro.blur     = 10.0f;
 
-    e.approach.enabled = false;
+    e.approach.enabled = true;
     e.approach.opacity = 100.0f;
 
     e.focus.enabled  = true;
@@ -63,11 +65,11 @@ SubtitleEffect SubtitleEffect::createDefault()
     e.focus.opacity  = 100.0f;
     e.focus.fontSize = 48.0f;
 
-    e.recede.enabled = false;
+    e.recede.enabled = true;
     e.recede.opacity = 100.0f;
 
-    e.outro.enabled  = false;
-    e.outro.opacity  = 100.0f;  // visible when enabled (was 0 → invisible in alpha export)
+    e.outro.enabled  = true;
+    e.outro.opacity  = 100.0f;
     e.outro.blur     = 10.0f;
 
     return e;

@@ -25,10 +25,13 @@ A cross-platform subtitle generator that creates chroma-key-ready subtitle video
 ## Build
 
 ```bash
-# macOS (Homebrew)
-brew install qt@6 ffmpeg cmake
-cmake -B build -DCMAKE_PREFIX_PATH=$(brew --prefix qt@6)
-cmake --build build
+# macOS (Homebrew) — use build-mac/ so Windows build/ is not overwritten
+brew install qt@6 ffmpeg cmake pkg-config
+./build-mac.sh
+# or manually:
+# cmake -B build-mac -DCMAKE_PREFIX_PATH=$(brew --prefix qt@6)
+# cmake --build build-mac
+# open build-mac/SubtitleForge.app
 
 # Windows (vcpkg)
 vcpkg install qt6 ffmpeg

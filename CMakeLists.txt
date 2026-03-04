@@ -110,6 +110,10 @@ target_link_libraries(SubtitleForge PRIVATE
 )
 
 if(APPLE)
+    # macOS: app bundle (.app) and frameworks for video/audio
+    set_target_properties(SubtitleForge PROPERTIES
+        MACOSX_BUNDLE TRUE
+        MACOSX_BUNDLE_GUI_IDENTIFIER "com.subtitleforge.app")
     find_library(COREMEDIA_FRAMEWORK CoreMedia)
     find_library(VIDEOTOOLBOX_FRAMEWORK VideoToolbox)
     if(COREMEDIA_FRAMEWORK AND VIDEOTOOLBOX_FRAMEWORK)

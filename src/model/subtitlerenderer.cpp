@@ -123,8 +123,12 @@ QImage SubtitleRenderer::renderFrame(const Project &project,
         qreal cx      = width  / 2.0 + ip.posX - drawW / 2.0;
         qreal cy      = height / 2.0 + ip.posY - drawH / 2.0;
 
+        // Isolate opacity per subtitle so transparentBg (MOV alpha) export
+        // doesn’t inherit previous draw state and drop non-focus stages.
+        painter.save();
         painter.setOpacity(std::clamp(ip.opacity / 100.0f, 0.0f, 1.0f));
         painter.drawImage(QRectF(cx, cy, drawW, drawH), txt);
+        painter.restore();
     }
 
     painter.setOpacity(1.0);
