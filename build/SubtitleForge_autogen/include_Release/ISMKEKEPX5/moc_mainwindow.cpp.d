@@ -1,11 +1,14 @@
-C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge_autogen/include_Release/ISMKEKEPX5/moc_mainwindow.cpp: C:/Users/dpvpd/source/SubtitleForge/src/app/mainwindow.h \
-  C:/Users/dpvpd/source/SubtitleForge/src/audio/audiodecoder.h \
-  C:/Users/dpvpd/source/SubtitleForge/src/audio/audioplayback.h \
-  C:/Users/dpvpd/source/SubtitleForge/src/model/project.h \
-  C:/Users/dpvpd/source/SubtitleForge/src/model/subtitle.h \
-  C:/Users/dpvpd/source/SubtitleForge/src/model/subtitleeffect.h \
+C:/Users/dpvpd/source/reels-forge/SubtitleForge/build/SubtitleForge_autogen/include_Release/ISMKEKEPX5/moc_mainwindow.cpp: C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/app/mainwindow.h \
+  C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/audio/audiodecoder.h \
+  C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/audio/audioplayback.h \
+  C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/model/project.h \
+  C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/model/subtitle.h \
+  C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/model/subtitleeffect.h \
+  C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/QFutureWatcher \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/QJsonObject \
+  C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/QMap \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/QObject \
+  C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/QPair \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/QString \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/QTimer \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/QVector \
@@ -55,12 +58,17 @@ C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge_autogen/include_Release/
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qdebug.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qendian.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qeventloop.h \
+  C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qexception.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qexceptionhandling.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qflags.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qfloat16.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qforeach.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qfunctionaltools_impl.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qfunctionpointer.h \
+  C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qfuture.h \
+  C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qfuture_impl.h \
+  C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qfutureinterface.h \
+  C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qfuturewatcher.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qgenericatomic.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qglobal.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qglobalstatic.h \
@@ -85,6 +93,7 @@ C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge_autogen/include_Release/
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qmetacontainer.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qmetatype.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qminmax.h \
+  C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qmutex.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qnamespace.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qnumeric.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qobject.h \
@@ -95,9 +104,12 @@ C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge_autogen/include_Release/
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qpair.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qpoint.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qprocessordetection.h \
+  C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qpromise.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qrect.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qrefcount.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qregularexpression.h \
+  C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qresultstore.h \
+  C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qrunnable.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qscopedpointer.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qscopeguard.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qset.h \
@@ -134,11 +146,14 @@ C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge_autogen/include_Release/
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qtenvironmentvariables.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qtextstream.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qtformat_impl.h \
+  C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qthread.h \
+  C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qthreadpool.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qtimer.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qtmetamacros.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qtnoop.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qtpreprocessorsupport.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qtresource.h \
+  C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qtsan_impl.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qttranslation.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qttypetraits.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qtversion.h \
@@ -156,6 +171,7 @@ C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge_autogen/include_Release/
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/qyieldcpu.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtGui/QColor \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtGui/QFont \
+  C:/vcpkg/installed/x64-windows/include/Qt6/QtGui/QImage \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtGui/qaction.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtGui/qbitmap.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtGui/qbrush.h \

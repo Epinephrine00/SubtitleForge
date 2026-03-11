@@ -1,6 +1,9 @@
 #include "audio/audioplayback.h"
 #include <QUrl>
 #include <QSettings>
+#include <QFileInfo>
+#include <QAudioDevice>
+#include <QMediaDevices>
 
 static const char kAudioVolumeKey[] = "audio/volume";
 
@@ -10,6 +13,7 @@ AudioPlayback::AudioPlayback(QObject *parent)
     , m_audioOutput(new QAudioOutput(this))
 {
     m_player->setAudioOutput(m_audioOutput);
+    m_audioOutput->setDevice(QMediaDevices::defaultAudioOutput());
 
     m_volume = static_cast<float>(QSettings().value(kAudioVolumeKey, 1.0).toDouble());
     m_volume = std::clamp(m_volume, 0.0f, 1.0f);
@@ -21,12 +25,22 @@ AudioPlayback::AudioPlayback(QObject *parent)
             this, &AudioPlayback::onMediaDurationChanged);
     connect(m_player, &QMediaPlayer::playbackStateChanged,
             this, &AudioPlayback::onPlaybackStateChanged);
+    connect(m_player, &QMediaPlayer::mediaStatusChanged,
+            this, &AudioPlayback::onMediaStatusChanged);
+    connect(m_player, &QMediaPlayer::errorOccurred,
+            this, &AudioPlayback::onError);
 }
 
 void AudioPlayback::loadFile(const QString &path)
 {
-    m_player->setSource(QUrl::fromLocalFile(path));
+    if (path.isEmpty()) {
+        m_player->setSource(QUrl());
+        return;
+    }
+    QString absPath = QFileInfo(path).absoluteFilePath();
+    m_player->setSource(QUrl::fromLocalFile(absPath));
     m_audioOutput->setVolume(m_volume);
+    m_audioOutput->setMuted(false);
 }
 
 void AudioPlayback::setVolume(float linear)
@@ -38,6 +52,11 @@ void AudioPlayback::setVolume(float linear)
 
 void AudioPlayback::play()
 {
+    if (m_player->mediaStatus() == QMediaPlayer::NoMedia || m_player->mediaStatus() == QMediaPlayer::LoadingMedia) {
+        m_playWhenLoaded = true;
+        return;
+    }
+    m_playWhenLoaded = false;
     m_player->play();
 }
 
@@ -89,4 +108,32 @@ void AudioPlayback::onMediaDurationChanged(qint64 ms)
 void AudioPlayback::onPlaybackStateChanged(QMediaPlayer::PlaybackState st)
 {
     emit playbackStateChanged(st == QMediaPlayer::PlayingState);
+}
+
+void AudioPlayback::onMediaStatusChanged(QMediaPlayer::MediaStatus status)
+{
+    if (status == QMediaPlayer::LoadedMedia || status == QMediaPlayer::BufferedMedia) {
+        m_audioOutput->setVolume(m_volume);
+        m_audioOutput->setMuted(false);
+        if (m_playWhenLoaded) {
+            m_playWhenLoaded = false;
+            m_player->play();
+        }
+    }
+}
+
+void AudioPlayback::onError(QMediaPlayer::Error error, const QString &detail)
+{
+    QString msg = detail;
+    if (msg.isEmpty()) {
+        switch (error) {
+        case QMediaPlayer::NoError: return;
+        case QMediaPlayer::ResourceError: msg = "Resource error"; break;
+        case QMediaPlayer::FormatError: msg = "Format/codec error"; break;
+        case QMediaPlayer::NetworkError: msg = "Network error"; break;
+        case QMediaPlayer::AccessDeniedError: msg = "Access denied"; break;
+        default: msg = "Media error"; break;
+        }
+    }
+    emit errorOccurred(msg);
 }

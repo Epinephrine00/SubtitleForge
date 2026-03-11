@@ -28,13 +28,17 @@ signals:
     void positionChanged(qint64 framePos);
     void durationChanged(qint64 totalMs);
     void playbackStateChanged(bool playing);
+    void errorOccurred(const QString &message);
 
 private slots:
     void onMediaPositionChanged(qint64 ms);
     void onMediaDurationChanged(qint64 ms);
     void onPlaybackStateChanged(QMediaPlayer::PlaybackState st);
+    void onMediaStatusChanged(QMediaPlayer::MediaStatus status);
+    void onError(QMediaPlayer::Error error, const QString &detail);
 
 private:
+    bool m_playWhenLoaded = false;
     QMediaPlayer *m_player      = nullptr;
     QAudioOutput *m_audioOutput = nullptr;
     int           m_fps         = 30;

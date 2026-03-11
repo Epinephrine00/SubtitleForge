@@ -1,6 +1,6 @@
-^C:\USERS\DPVPD\SOURCE\SUBTITLEFORGE\BUILD\CMAKEFILES\45F03A1C123F76075035490AF1362DF2\GENERATE.STAMP.RULE
+^C:\USERS\DPVPD\SOURCE\REELS-FORGE\SUBTITLEFORGE\BUILD\CMAKEFILES\776E0508F0D334230BFF766149068CB5\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dpvpd/source/SubtitleForge -BC:/Users/dpvpd/source/SubtitleForge/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge.sln
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dpvpd/source/reels-forge/SubtitleForge -BC:/Users/dpvpd/source/reels-forge/SubtitleForge/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/dpvpd/source/reels-forge/SubtitleForge/build/SubtitleForge.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

@@ -17,7 +17,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Widgets Multimedia)
+find_package(Qt6 REQUIRED COMPONENTS Widgets Multimedia Concurrent)
 
 # --- FFmpeg via pkg-config (Linux/macOS) or manual paths (Windows) ---
 find_package(PkgConfig QUIET)
@@ -66,12 +66,12 @@ set(SOURCES
     src/model/project.cpp
     src/model/animationengine.cpp
     src/model/subtitlerenderer.cpp
-    src/widgets/textinputpanel.cpp
-    src/widgets/effectspanel.cpp
     src/widgets/timelinewidget.cpp
     src/widgets/previewwidget.cpp
     src/audio/audiodecoder.cpp
     src/audio/audioplayback.cpp
+    src/video/videodecoder.cpp
+    src/video/previewdecoder.cpp
     src/video/videoexporter.cpp
     src/io/projectio.cpp
 )
@@ -83,12 +83,12 @@ set(HEADERS
     src/model/project.h
     src/model/animationengine.h
     src/model/subtitlerenderer.h
-    src/widgets/textinputpanel.h
-    src/widgets/effectspanel.h
     src/widgets/timelinewidget.h
     src/widgets/previewwidget.h
     src/audio/audiodecoder.h
     src/audio/audioplayback.h
+    src/video/videodecoder.h
+    src/video/previewdecoder.h
     src/video/videoexporter.h
     src/io/projectio.h
 )
@@ -105,6 +105,7 @@ target_include_directories(SubtitleForge PRIVATE
 target_link_libraries(SubtitleForge PRIVATE
     Qt6::Widgets
     Qt6::Multimedia
+    Qt6::Concurrent
     ${FFMPEG_IMPORTED_TARGETS}
     ${FFMPEG_LIBRARIES}
 )
@@ -125,4 +126,17 @@ endif()
 if(WIN32)
     set_target_properties(SubtitleForge PROPERTIES
         WIN32_EXECUTABLE TRUE)
+    # Deploy Qt plugins (e.g. platforms/qwindows.dll) and DLLs next to the exe
+    set(QT_DEPLOY_HINTS "${CMAKE_PREFIX_PATH}/bin" "$ENV{VCPKG_ROOT}/installed/x64-windows/tools/qt6/bin")
+    if(DEFINED Qt6_DIR)
+        get_filename_component(_qt_bin "${Qt6_DIR}/../../bin" ABSOLUTE)
+        list(PREPEND QT_DEPLOY_HINTS "${_qt_bin}")
+    endif()
+    find_program(WINDEPLOYQT_EXE windeployqt HINTS ${QT_DEPLOY_HINTS})
+    if(WINDEPLOYQT_EXE)
+        add_custom_command(TARGET SubtitleForge POST_BUILD
+            COMMAND "${WINDEPLOYQT_EXE}" --no-compiler-runtime --no-translations "$<TARGET_FILE_DIR:SubtitleForge>"
+            COMMENT "Deploying Qt plugins and DLLs..."
+        )
+    endif()
 endif()

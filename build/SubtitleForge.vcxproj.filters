@@ -1,129 +1,129 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge_autogen\mocs_compilation_Debug.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\build\SubtitleForge_autogen\mocs_compilation_Debug.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\main.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\app\mainwindow.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\app\mainwindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\model\subtitle.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\model\subtitle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\model\subtitleeffect.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\model\subtitleeffect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\model\project.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\model\project.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\model\animationengine.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\model\animationengine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\model\subtitlerenderer.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\model\subtitlerenderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\widgets\textinputpanel.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\widgets\timelinewidget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\widgets\effectspanel.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\widgets\previewwidget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\widgets\timelinewidget.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\audio\audiodecoder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\widgets\previewwidget.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\audio\audioplayback.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\audio\audiodecoder.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\video\videodecoder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\audio\audioplayback.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\video\previewdecoder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\video\videoexporter.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\video\videoexporter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\src\io\projectio.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\io\projectio.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge_autogen\3YJK5W5UP7\qrc_resources.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\build\SubtitleForge_autogen\3YJK5W5UP7\qrc_resources.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge_autogen\mocs_compilation_Release.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\build\SubtitleForge_autogen\mocs_compilation_Release.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge_autogen\mocs_compilation_MinSizeRel.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\build\SubtitleForge_autogen\mocs_compilation_MinSizeRel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dpvpd\source\SubtitleForge\build\SubtitleForge_autogen\mocs_compilation_RelWithDebInfo.cpp">
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\build\SubtitleForge_autogen\mocs_compilation_RelWithDebInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\app\mainwindow.h">
+    <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\app\mainwindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\model\subtitle.h">
+    <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\model\subtitle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\model\subtitleeffect.h">
+    <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\model\subtitleeffect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\model\project.h">
+    <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\model\project.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\model\animationengine.h">
+    <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\model\animationengine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\model\subtitlerenderer.h">
+    <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\model\subtitlerenderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\widgets\textinputpanel.h">
+    <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\widgets\timelinewidget.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\widgets\effectspanel.h">
+    <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\widgets\previewwidget.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\widgets\timelinewidget.h">
+    <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\audio\audiodecoder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\widgets\previewwidget.h">
+    <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\audio\audioplayback.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\audio\audiodecoder.h">
+    <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\video\videodecoder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\audio\audioplayback.h">
+    <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\video\previewdecoder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\video\videoexporter.h">
+    <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\video\videoexporter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\dpvpd\source\SubtitleForge\src\io\projectio.h">
+    <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\io\projectio.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\dpvpd\source\SubtitleForge\build\CMakeFiles\db2770b7ebd3665bdb2b4fc3f63abf2d\qrc_resources.cpp.rule">
+    <CustomBuild Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\build\CMakeFiles\6ec6faba6b3391aa59749f598b0ccc7d\qrc_resources.cpp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\dpvpd\source\SubtitleForge\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\dpvpd\source\SubtitleForge\resources\resources.qrc" />
+    <None Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\resources\resources.qrc" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{3B6CD198-74C3-3AA7-AC6B-C895EC5ECC31}</UniqueIdentifier>
+      <UniqueIdentifier>{1D9A84C1-9E29-3B1A-8967-F35BB81B806C}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{AC7F3EF6-A64D-378F-8ADC-FE0B9FD16F8D}</UniqueIdentifier>
+      <UniqueIdentifier>{8AEC7465-28A1-34C9-9AEC-18A432F4C98B}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{159F4E63-1295-339B-B77A-C716B3FC55F8}</UniqueIdentifier>
+      <UniqueIdentifier>{F9653C57-D4E9-3466-8B92-F59C407ECE21}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

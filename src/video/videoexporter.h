@@ -17,10 +17,10 @@ public:
         bool alphaChannel = false;
     };
 
-    // Blocking export – call from a worker thread or use signals to track
-    // progress.  Returns true on success.
     bool exportVideo(const Project &project, const ExportSettings &settings);
     void requestCancel() { m_cancel = true; }
+    bool wasCancelled() const { return m_cancel; }
+    QString lastError() const { return m_lastError; }
 
 signals:
     void progressChanged(int percent);
@@ -28,4 +28,5 @@ signals:
 
 private:
     bool m_cancel = false;
+    QString m_lastError;
 };

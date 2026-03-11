@@ -46,12 +46,21 @@ template <> constexpr inline auto AudioPlayback::qt_create_metaobjectdata<qt_met
         "totalMs",
         "playbackStateChanged",
         "playing",
+        "errorOccurred",
+        "message",
         "onMediaPositionChanged",
         "ms",
         "onMediaDurationChanged",
         "onPlaybackStateChanged",
         "QMediaPlayer::PlaybackState",
-        "st"
+        "st",
+        "onMediaStatusChanged",
+        "QMediaPlayer::MediaStatus",
+        "status",
+        "onError",
+        "QMediaPlayer::Error",
+        "error",
+        "detail"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -67,17 +76,29 @@ template <> constexpr inline auto AudioPlayback::qt_create_metaobjectdata<qt_met
         QtMocHelpers::SignalData<void(bool)>(6, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::Bool, 7 },
         }}),
+        // Signal 'errorOccurred'
+        QtMocHelpers::SignalData<void(const QString &)>(8, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 9 },
+        }}),
         // Slot 'onMediaPositionChanged'
-        QtMocHelpers::SlotData<void(qint64)>(8, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::LongLong, 9 },
+        QtMocHelpers::SlotData<void(qint64)>(10, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::LongLong, 11 },
         }}),
         // Slot 'onMediaDurationChanged'
-        QtMocHelpers::SlotData<void(qint64)>(10, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::LongLong, 9 },
+        QtMocHelpers::SlotData<void(qint64)>(12, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::LongLong, 11 },
         }}),
         // Slot 'onPlaybackStateChanged'
-        QtMocHelpers::SlotData<void(QMediaPlayer::PlaybackState)>(11, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { 0x80000000 | 12, 13 },
+        QtMocHelpers::SlotData<void(QMediaPlayer::PlaybackState)>(13, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 14, 15 },
+        }}),
+        // Slot 'onMediaStatusChanged'
+        QtMocHelpers::SlotData<void(QMediaPlayer::MediaStatus)>(16, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 17, 18 },
+        }}),
+        // Slot 'onError'
+        QtMocHelpers::SlotData<void(QMediaPlayer::Error, const QString &)>(19, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 20, 21 }, { QMetaType::QString, 22 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -105,9 +126,12 @@ void AudioPlayback::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 0: _t->positionChanged((*reinterpret_cast<std::add_pointer_t<qint64>>(_a[1]))); break;
         case 1: _t->durationChanged((*reinterpret_cast<std::add_pointer_t<qint64>>(_a[1]))); break;
         case 2: _t->playbackStateChanged((*reinterpret_cast<std::add_pointer_t<bool>>(_a[1]))); break;
-        case 3: _t->onMediaPositionChanged((*reinterpret_cast<std::add_pointer_t<qint64>>(_a[1]))); break;
-        case 4: _t->onMediaDurationChanged((*reinterpret_cast<std::add_pointer_t<qint64>>(_a[1]))); break;
-        case 5: _t->onPlaybackStateChanged((*reinterpret_cast<std::add_pointer_t<QMediaPlayer::PlaybackState>>(_a[1]))); break;
+        case 3: _t->errorOccurred((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 4: _t->onMediaPositionChanged((*reinterpret_cast<std::add_pointer_t<qint64>>(_a[1]))); break;
+        case 5: _t->onMediaDurationChanged((*reinterpret_cast<std::add_pointer_t<qint64>>(_a[1]))); break;
+        case 6: _t->onPlaybackStateChanged((*reinterpret_cast<std::add_pointer_t<QMediaPlayer::PlaybackState>>(_a[1]))); break;
+        case 7: _t->onMediaStatusChanged((*reinterpret_cast<std::add_pointer_t<QMediaPlayer::MediaStatus>>(_a[1]))); break;
+        case 8: _t->onError((*reinterpret_cast<std::add_pointer_t<QMediaPlayer::Error>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[2]))); break;
         default: ;
         }
     }
@@ -117,6 +141,8 @@ void AudioPlayback::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         if (QtMocHelpers::indexOfMethod<void (AudioPlayback::*)(qint64 )>(_a, &AudioPlayback::durationChanged, 1))
             return;
         if (QtMocHelpers::indexOfMethod<void (AudioPlayback::*)(bool )>(_a, &AudioPlayback::playbackStateChanged, 2))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (AudioPlayback::*)(const QString & )>(_a, &AudioPlayback::errorOccurred, 3))
             return;
     }
 }
@@ -140,14 +166,14 @@ int AudioPlayback::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 9;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 9)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 6;
+        _id -= 9;
     }
     return _id;
 }
@@ -168,5 +194,11 @@ void AudioPlayback::durationChanged(qint64 _t1)
 void AudioPlayback::playbackStateChanged(bool _t1)
 {
     QMetaObject::activate<void>(this, &staticMetaObject, 2, nullptr, _t1);
+}
+
+// SIGNAL 3
+void AudioPlayback::errorOccurred(const QString & _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 3, nullptr, _t1);
 }
 QT_WARNING_POP

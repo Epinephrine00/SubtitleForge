@@ -3,6 +3,7 @@
 
 int main(int argc, char *argv[])
 {
+    // Optional: set QT_MEDIA_BACKEND=windows if default has no audio on your system
     QApplication app(argc, argv);
     app.setApplicationName("SubtitleForge");
     app.setApplicationVersion("1.0.0");

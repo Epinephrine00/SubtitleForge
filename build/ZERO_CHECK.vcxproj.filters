@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\dpvpd\source\SubtitleForge\build\CMakeFiles\45f03a1c123f76075035490af1362df2\generate.stamp.rule">
+    <CustomBuild Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\build\CMakeFiles\776e0508f0d334230bff766149068cb5\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{3B6CD198-74C3-3AA7-AC6B-C895EC5ECC31}</UniqueIdentifier>
+      <UniqueIdentifier>{1D9A84C1-9E29-3B1A-8967-F35BB81B806C}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

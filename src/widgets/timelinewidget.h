@@ -15,6 +15,7 @@ public:
     void setCurrentFrame(qint64 frame);
     void setTotalFrames(qint64 total);
     void setFps(int fps);
+    void setTrimRange(qint64 trimStartFrames, qint64 sourceTotalFrames);
     qint64 currentFrame() const { return m_currentFrame; }
     int  selectedSubtitleId() const { return m_selectedId; }
     void clearSelection();
@@ -49,6 +50,8 @@ private:
 
     qint64 m_currentFrame = 0;
     qint64 m_totalFrames  = 0;
+    qint64 m_trimStart    = 0;
+    qint64 m_sourceTotal  = 0;
     int    m_fps          = 30;
 
     // view

@@ -47,6 +47,13 @@ void TimelineWidget::setTotalFrames(qint64 total)
 
 void TimelineWidget::setFps(int fps) { m_fps = fps; }
 
+void TimelineWidget::setTrimRange(qint64 trimStartFrames, qint64 sourceTotalFrames)
+{
+    m_trimStart   = trimStartFrames;
+    m_sourceTotal = sourceTotalFrames;
+    update();
+}
+
 void TimelineWidget::clearSelection()
 {
     m_selectedId = -1;
@@ -83,7 +90,6 @@ void TimelineWidget::paintEvent(QPaintEvent *)
         qint64 firstFrame = frameAtX(0);
         qint64 lastFrame  = frameAtX(w);
         int stepFrames = std::max(1, static_cast<int>(60.0 / m_pixelsPerFrame));
-        // round to nice intervals
         for (int nice : {1, 5, 10, 15, 30, 60, 150, 300, 600, 1800, 3600}) {
             int nf = nice * m_fps;
             if (nf * m_pixelsPerFrame >= 60) { stepFrames = nf; break; }
@@ -101,21 +107,33 @@ void TimelineWidget::paintEvent(QPaintEvent *)
         }
     }
 
+    // Current / Total time (right side of ruler)
+    double curSec = static_cast<double>(m_currentFrame) / std::max(1, m_fps);
+    double totalSec = static_cast<double>(m_totalFrames) / std::max(1, m_fps);
+    int curM = static_cast<int>(curSec) / 60;
+    double curS = curSec - curM * 60;
+    int totalM = static_cast<int>(totalSec) / 60;
+    double totalS = totalSec - totalM * 60;
+    QString timeLabel = QString("%1:%2 / %3:%4")
+                            .arg(curM).arg(curS, 0, 'f', 2)
+                            .arg(totalM).arg(totalS, 0, 'f', 2);
+    p.drawText(w - 120, kRulerHeight - 4, timeLabel);
+
     // ---- waveform ----
-    if (m_waveform.valid && m_waveform.peaks.size() >= 2) {
+    if (m_waveform.valid && m_waveform.peaks.size() >= 2 && m_sourceTotal > 0) {
         int peakCount   = m_waveform.peaks.size() / 2;
         int waveTop     = kRulerHeight;
         int waveMid     = waveTop + kWaveformHeight / 2;
-        double totalSec = m_waveform.durationSec;
-        double totalF   = totalSec * m_fps;
 
         p.setPen(Qt::NoPen);
         p.setBrush(QColor(0, 180, 100, 180));
 
         for (int px = 0; px < w; ++px) {
             qint64 f = frameAtX(px);
-            if (f < 0 || f >= static_cast<qint64>(totalF)) continue;
-            double frac = static_cast<double>(f) / totalF;
+            if (f < 0 || f >= m_totalFrames) continue;
+            qint64 sourceFrame = m_trimStart + f;
+            if (sourceFrame >= m_sourceTotal) continue;
+            double frac = static_cast<double>(sourceFrame) / m_sourceTotal;
             int idx = static_cast<int>(frac * peakCount);
             idx = std::clamp(idx, 0, peakCount - 1);
             float lo = m_waveform.peaks[idx * 2];

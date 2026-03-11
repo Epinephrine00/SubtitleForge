@@ -2,6 +2,32 @@
 #include <QJsonArray>
 #include <algorithm>
 
+QJsonObject VideoTitle::toJson() const
+{
+    QJsonObject o;
+    o["text"]       = text;
+    o["fontFamily"] = font.family();
+    o["fontBold"]   = font.bold();
+    o["fontItalic"] = font.italic();
+    o["fontSize"]   = fontSize;
+    o["color"]      = color.name(QColor::HexArgb);
+    o["posY"]       = posY;
+    return o;
+}
+
+VideoTitle VideoTitle::fromJson(const QJsonObject &o)
+{
+    VideoTitle t;
+    t.text     = o["text"].toString();
+    t.font.setFamily(o["fontFamily"].toString("Arial"));
+    t.font.setBold(o["fontBold"].toBool(false));
+    t.font.setItalic(o["fontItalic"].toBool(false));
+    t.fontSize = static_cast<float>(o["fontSize"].toDouble(36));
+    t.color    = QColor(o["color"].toString("#ffffffff"));
+    t.posY     = static_cast<float>(o["posY"].toDouble(0));
+    return t;
+}
+
 void Project::addSubtitle(const SubtitleEntry &e)
 {
     m_subs.append(e);
@@ -12,7 +38,7 @@ void Project::removeSubtitle(int id)
 {
     m_subs.erase(
         std::remove_if(m_subs.begin(), m_subs.end(),
-                        [id](const SubtitleEntry &s) { return s.id == id; }),
+                       [id](const SubtitleEntry &s) { return s.id == id; }),
         m_subs.end());
 }
 
@@ -48,18 +74,34 @@ void Project::sortSubtitles()
               });
 }
 
-void Project::convertSubtitleFrames(int oldFps, int newFps)
+void Project::setTotalFrames(qint64 v)
 {
-    if (oldFps == newFps || oldFps <= 0 || newFps <= 0) return;
-    for (auto &sub : m_subs)
-        sub.keyFrame = sub.keyFrame * newFps / oldFps;
+    m_trimEnd = m_trimStart + std::max<qint64>(0, v);
+}
+
+qint64 Project::trimmedToSourceFrame(qint64 trimmedFrame) const
+{
+    return m_trimStart + std::max<qint64>(0, trimmedFrame);
 }
 
 void Project::clear()
 {
     m_subs.clear();
-    m_audioPath.clear();
-    m_totalFrames = 0;
+    m_mediaPath.clear();
+    m_sourceFrameRate = 60.0;
+    m_trimStart = 0;
+    m_trimEnd   = 0;
+    m_totalSourceFrames = 0;
+    m_nextId    = 1;
+    m_globalSubtitleFont = QFont("Arial");
+    m_globalSubtitleFontSize = 48.0f;
+    m_globalSubtitleColor = Qt::white;
+    m_videoTitle = VideoTitle();
+}
+
+void Project::clearSubtitles()
+{
+    m_subs.clear();
     m_nextId = 1;
 }
 
@@ -69,26 +111,44 @@ QJsonObject Project::toJson() const
     for (const auto &s : m_subs) arr.append(s.toJson());
 
     QJsonObject o;
-    o["audioFilePath"] = m_audioPath;
-    o["fps"]           = m_fps;
-    o["videoWidth"]    = m_w;
-    o["videoHeight"]   = m_h;
-    o["totalFrames"]   = m_totalFrames;
-    o["nextId"]        = m_nextId;
-    o["subtitles"]     = arr;
-    o["globalEffect"]  = m_globalEffect.toJson();
+    o["mediaFilePath"]         = m_mediaPath;
+    o["sourceFrameRate"]       = m_sourceFrameRate;
+    o["trimStartFrame"]        = m_trimStart;
+    o["trimEndFrame"]          = m_trimEnd;
+    o["totalSourceFrames"]     = m_totalSourceFrames;
+    o["nextId"]                = m_nextId;
+    o["subtitles"]             = arr;
+    o["globalEffect"]           = m_globalEffect.toJson();
+    o["globalSubtitleFont"]    = m_globalSubtitleFont.family();
+    o["globalSubtitleBold"]    = m_globalSubtitleFont.bold();
+    o["globalSubtitleItalic"]  = m_globalSubtitleFont.italic();
+    o["globalSubtitleFontSize"] = m_globalSubtitleFontSize;
+    o["globalSubtitleColor"]   = m_globalSubtitleColor.name(QColor::HexArgb);
+    o["videoTitle"]            = m_videoTitle.toJson();
     return o;
 }
 
 Project Project::fromJson(const QJsonObject &o)
 {
     Project p;
-    p.m_audioPath   = o["audioFilePath"].toString();
-    p.m_fps         = o["fps"].toInt(30);
-    p.m_w           = o["videoWidth"].toInt(1920);
-    p.m_h           = o["videoHeight"].toInt(1080);
-    p.m_totalFrames = o["totalFrames"].toInteger();
+    p.m_mediaPath   = o["mediaFilePath"].toString();
+    if (p.m_mediaPath.isEmpty())
+        p.m_mediaPath = o["audioFilePath"].toString();  // legacy
+    p.m_sourceFrameRate = o["sourceFrameRate"].toDouble(60.0);
+    if (p.m_sourceFrameRate <= 0) p.m_sourceFrameRate = 60.0;
+    p.m_trimStart   = o["trimStartFrame"].toInteger(0);
+    p.m_trimEnd     = o["trimEndFrame"].toInteger(0);
+    p.m_totalSourceFrames = o["totalSourceFrames"].toInteger(0);
     p.m_nextId      = o["nextId"].toInt(1);
+
+    p.m_globalSubtitleFont.setFamily(o["globalSubtitleFont"].toString("Arial"));
+    p.m_globalSubtitleFont.setBold(o["globalSubtitleBold"].toBool(false));
+    p.m_globalSubtitleFont.setItalic(o["globalSubtitleItalic"].toBool(false));
+    p.m_globalSubtitleFontSize = static_cast<float>(o["globalSubtitleFontSize"].toDouble(48));
+    p.m_globalSubtitleColor = QColor(o["globalSubtitleColor"].toString("#ffffffff"));
+
+    if (o.contains("videoTitle"))
+        p.m_videoTitle = VideoTitle::fromJson(o["videoTitle"].toObject());
 
     if (o.contains("globalEffect"))
         p.m_globalEffect = SubtitleEffect::fromJson(o["globalEffect"].toObject());

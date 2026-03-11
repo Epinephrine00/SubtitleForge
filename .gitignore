@@ -1,3 +1,6 @@
 *.png
 build/
 build-mac/
+CMakeUserPresets.json
+.cursor/
+testdata/

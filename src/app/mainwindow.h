@@ -2,16 +2,25 @@
 
 #include <QMainWindow>
 #include <QTimer>
+#include <QImage>
+#include <QPair>
+#include <QFutureWatcher>
+#include <QMap>
+#include <thread>
 #include "model/project.h"
 #include "audio/audiodecoder.h"
 #include "audio/audioplayback.h"
 
-class TextInputPanel;
-class EffectsPanel;
 class TimelineWidget;
 class PreviewWidget;
+class PreviewDecoder;
 
+class QCheckBox;
 class QComboBox;
+class QFontComboBox;
+class QLabel;
+class QSpinBox;
+class QTextEdit;
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -20,17 +29,17 @@ public:
 
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
+    void closeEvent(QCloseEvent *event) override;
 
 private slots:
-    // menu actions
     void onNewProject();
     void onOpenProject();
     void onSaveProject();
     void onSaveProjectAs();
-    void onImportAudio();
+    void onImportVideo();
+    void onImportTxt();
     void onExportVideo();
 
-    // timeline signals
     void onFrameChanged(qint64 frame);
     void onPlayPause();
     void onStepForward();
@@ -41,27 +50,18 @@ private slots:
     void onSubtitleDeselected();
     void onSubtitleMoved(int id, qint64 newKeyFrame);
 
-    // text panel signals
-    void onAddSubtitle(const QString &text, const QFont &font,
-                       const QColor &color, Qt::Alignment align);
-    void onSubtitleTextChanged(int id, const QString &text);
-    void onSubtitleFontChanged(int id, const QFont &font);
-    void onSubtitleColorChanged(int id, const QColor &color);
-    void onSubtitleAlignmentChanged(int id, Qt::Alignment align);
     void onDeleteSubtitle(int id);
 
-    // effects panel
-    void onEffectChanged(const SubtitleEffect &eff);
+    void onGlobalSubtitleFontChanged();
+    void onGlobalSubtitleColorChanged();
+    void onVideoTitleChanged();
+    void onPreviewFrameDecoded(qint64 frameIndex, QImage image);
 
-    // output settings
-    void onProjectFpsChanged(int index);
-    void onProjectResolutionChanged(int index);
+    void onSetTrimStart();
+    void onSetTrimEnd();
 
-    // playback
     void onAudioPositionChanged(qint64 frame);
     void onAudioDurationChanged(qint64 ms);
-
-    // refresh timer during playback
     void onRefreshTick();
 
 private:
@@ -71,24 +71,45 @@ private:
     void refreshTimeline();
     void seekToFrame(qint64 frame);
     void pauseIfPlaying();
+    void updatePreviewVideoFrame();
+    void ensurePreviewDecodeRequested();
+    void updateTrimLabel();
 
-    Project        m_project;
-    QString        m_projectPath;
+    Project m_project;
+    QString m_projectPath;
 
-    AudioPlayback *m_audio    = nullptr;
+    AudioPlayback *m_audio = nullptr;
     AudioDecoder::WaveformData m_waveform;
 
-    TextInputPanel *m_textPanel   = nullptr;
-    EffectsPanel   *m_effectPanel = nullptr;
-    TimelineWidget *m_timeline    = nullptr;
-    PreviewWidget  *m_preview     = nullptr;
+    TimelineWidget *m_timeline = nullptr;
+    PreviewWidget  *m_preview  = nullptr;
 
-    QComboBox *m_fpsCombo   = nullptr;
-    QComboBox *m_resCombo  = nullptr;
+    QTextEdit       *m_titleEdit      = nullptr;
+    QFontComboBox  *m_titleFontCombo = nullptr;
+    QSpinBox       *m_titleFontSize  = nullptr;
+    QCheckBox      *m_titleBoldCheck = nullptr;
+    QCheckBox      *m_titleItalicCheck = nullptr;
+    QSpinBox       *m_titlePosYSpin   = nullptr;
+    class QPushButton *m_titleColorBtn = nullptr;
+
+    QFontComboBox  *m_globalFontCombo = nullptr;
+    QSpinBox       *m_globalFontSize  = nullptr;
+    QCheckBox      *m_globalBoldCheck = nullptr;
+    QCheckBox      *m_globalItalicCheck = nullptr;
+    QSpinBox       *m_globalPosYSpin   = nullptr;
+    class QPushButton *m_globalColorBtn = nullptr;
+
+    class QPushButton *m_trimStartBtn = nullptr;
+    class QPushButton *m_trimEndBtn   = nullptr;
+    QLabel         *m_trimLabel      = nullptr;
     class QSlider *m_volumeSlider = nullptr;
 
     QTimer *m_refreshTimer = nullptr;
-    qint64  m_currentFrame = 0;
-
-    void syncSettingsCombos();
+    PreviewDecoder *m_previewDecoder = nullptr;
+    std::thread m_decoderThread;
+    QMap<qint64, QImage> m_previewFrameCache;
+    static const int kPreviewCacheMax = 8;
+    qint64 m_currentFrame = 0;
+    QColor m_globalSubtitleColor = Qt::white;
+    QColor m_titleColor = Qt::white;
 };

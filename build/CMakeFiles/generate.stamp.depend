@@ -30,11 +30,11 @@ C:/Program Files/CMake/share/cmake-3.28/Modules/Platform/Windows-MSVC-CXX.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/Platform/Windows-MSVC.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/Platform/Windows.cmake
 C:/Program Files/CMake/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake
-C:/Users/dpvpd/source/SubtitleForge/CMakeLists.txt
-C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/3.28.0/CMakeCXXCompiler.cmake
-C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/3.28.0/CMakeRCCompiler.cmake
-C:/Users/dpvpd/source/SubtitleForge/build/CMakeFiles/3.28.0/CMakeSystem.cmake
-C:/Users/dpvpd/source/SubtitleForge/resources/resources.qrc
+C:/Users/dpvpd/source/reels-forge/SubtitleForge/CMakeLists.txt
+C:/Users/dpvpd/source/reels-forge/SubtitleForge/build/CMakeFiles/3.28.0/CMakeCXXCompiler.cmake
+C:/Users/dpvpd/source/reels-forge/SubtitleForge/build/CMakeFiles/3.28.0/CMakeRCCompiler.cmake
+C:/Users/dpvpd/source/reels-forge/SubtitleForge/build/CMakeFiles/3.28.0/CMakeSystem.cmake
+C:/Users/dpvpd/source/reels-forge/SubtitleForge/resources/resources.qrc
 C:/vcpkg/installed/x64-windows/share/Qt6/FindWrapAtomic.cmake
 C:/vcpkg/installed/x64-windows/share/Qt6/Qt6Config.cmake
 C:/vcpkg/installed/x64-windows/share/Qt6/Qt6ConfigExtras.cmake

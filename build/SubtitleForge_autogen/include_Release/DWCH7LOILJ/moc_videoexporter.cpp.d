@@ -1,7 +1,7 @@
-C:/Users/dpvpd/source/SubtitleForge/build/SubtitleForge_autogen/include_Release/DWCH7LOILJ/moc_videoexporter.cpp: C:/Users/dpvpd/source/SubtitleForge/src/video/videoexporter.h \
-  C:/Users/dpvpd/source/SubtitleForge/src/model/project.h \
-  C:/Users/dpvpd/source/SubtitleForge/src/model/subtitle.h \
-  C:/Users/dpvpd/source/SubtitleForge/src/model/subtitleeffect.h \
+C:/Users/dpvpd/source/reels-forge/SubtitleForge/build/SubtitleForge_autogen/include_Release/DWCH7LOILJ/moc_videoexporter.cpp: C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/video/videoexporter.h \
+  C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/model/project.h \
+  C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/model/subtitle.h \
+  C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/model/subtitleeffect.h \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/QJsonObject \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/QObject \
   C:/vcpkg/installed/x64-windows/include/Qt6/QtCore/QString \

@@ -1,19 +1,19 @@
 # SubtitleForge
 
-A cross-platform subtitle generator that creates chroma-key-ready subtitle videos from audio/video files.
+Vertical (9:16) subtitle video generator: import video + TXT subtitles, add title, trim, export MP4 1080×1920 60fps.
 
 > **This Project has Vibe-coded.**
 
 ## Features
 
-- Load audio (mp3, wav, flac, aac, ogg) or video files (mp4, mkv, avi, mov)
-- Audio waveform timeline with subtitle markers
-- 5-stage subtitle animation system (Intro, Approach, Focus, Recede, Outro)
-- Per-stage control: position, scale, blur, opacity, font size
-- Real-time preview on #00FF00 green background
-- Export to H.264 MP4 (720p / 1080p / 1440p / 2160p at 24/30/60 FPS)
-- Project save/load (.sfproj JSON format)
-- Multilingual text support (CJK, Latin, etc.)
+- Import video (mp4, mkv, avi, mov, webm) or audio
+- Import subtitles from TXT (split by `\n\n`), one block per timeline marker
+- Global subtitle style (font, size, color)
+- Video title (multiline, own font/size/color), shown full duration
+- Trim (start/end in seconds)
+- Timeline with waveform, current/total time, subtitle markers
+- Preview: center video (width-fit) + blurred semi-transparent fill + black background
+- Export: MP4 1080×1920 60fps only
 
 ## Dependencies
 
@@ -24,35 +24,58 @@ A cross-platform subtitle generator that creates chroma-key-ready subtitle video
 
 ## Build
 
+Project path: `reels-forge/SubtitleForge` (this folder).  
+If you copied the project from another folder, **delete the `build/` directory** and configure again so paths match this location.
+
+### Windows
+
+**Option A – CMake Presets (recommended)**
+
+1. Install [vcpkg](https://vcpkg.io/) and set `VCPKG_ROOT` to the vcpkg root.
+2. Install deps: `vcpkg install qt6 ffmpeg`
+3. From this folder:
+   ```powershell
+   cmake --preset windows-vcpkg
+   cmake --build build --config Release
+   ```
+4. Run: `.\build\Release\SubtitleForge.exe`
+
+**Option B – Scripts**
+
+```powershell
+# Configure (uses vcpkg if VCPKG_ROOT is set)
+.\configure-win.ps1
+# Build
+.\build-win.ps1
+```
+
+**Without vcpkg:** set Qt6 and FFmpeg via `CMAKE_PREFIX_PATH` and `FFMPEG_DIR` (or pkg-config on WSL).
+
+### macOS
+
 ```bash
-# macOS (Homebrew) — use build-mac/ so Windows build/ is not overwritten
 brew install qt@6 ffmpeg cmake pkg-config
 ./build-mac.sh
-# or manually:
-# cmake -B build-mac -DCMAKE_PREFIX_PATH=$(brew --prefix qt@6)
-# cmake --build build-mac
-# open build-mac/SubtitleForge.app
+open build-mac/SubtitleForge.app
+```
 
-# Windows (vcpkg)
-vcpkg install qt6 ffmpeg
-cmake -B build -DCMAKE_TOOLCHAIN_FILE=[vcpkg-root]/scripts/buildsystems/vcpkg.cmake
-cmake --build build --config Release
+### Linux
 
-# Linux
+```bash
 sudo apt install qt6-base-dev qt6-multimedia-dev libavformat-dev libavcodec-dev libavutil-dev libswresample-dev libswscale-dev
 cmake -B build
 cmake --build build
+./build/SubtitleForge
 ```
 
 ## Usage
 
-1. **File > Import Audio/Video** to load a source file
-2. The waveform appears on the timeline at the bottom
-3. Press **Space** to play/pause, **Left/Right** arrows to step one frame
-4. Type subtitle text in the top-left panel and press **Enter** to stamp it at the current time
-5. Click a subtitle marker on the timeline to select and edit its text or effects
-6. Configure animation stages in the Effects panel (top-right)
-7. **File > Export Video** to render the final MP4
+1. **File > Import Video** to load a source file.
+2. **File > Import TXT** to load subtitles (paragraphs separated by blank lines); they are spread evenly over the timeline.
+3. Set **Trim** (start/end seconds) and **Subtitle style** (font, size, color).
+4. Optionally set **Video title** (multiline, font, size, color); it is shown for the full duration.
+5. Drag subtitle markers on the timeline to change when each line appears.
+6. **File > Export Video** to render MP4 1080×1920 60fps.
 
 ## Keyboard Shortcuts
 
