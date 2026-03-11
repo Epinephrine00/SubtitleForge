@@ -219,6 +219,7 @@ C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/app/mainwindow.h
  mdp:C:/vcpkg/installed/x64-windows/include/Qt6/QtWidgets/qtwidgetsglobal.h
  mdp:C:/vcpkg/installed/x64-windows/include/Qt6/QtWidgets/qwidget.h
 C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/audio/audiodecoder.h
+C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/model/animationengine.h
 C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/audio/audioplayback.h
  mmc:Q_OBJECT
  mdp:C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/audio/audioplayback.h
@@ -345,11 +346,10 @@ C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/audio/audioplayback.h
  mdp:C:/vcpkg/installed/x64-windows/include/Qt6/QtMultimedia/qtmultimedia-config.h
  mdp:C:/vcpkg/installed/x64-windows/include/Qt6/QtMultimedia/qtmultimediaexports.h
  mdp:C:/vcpkg/installed/x64-windows/include/Qt6/QtMultimedia/qtmultimediaglobal.h
-C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/model/animationengine.h
-C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/io/projectio.h
 C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/model/subtitle.h
-C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/model/project.h
+C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/io/projectio.h
 C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/model/subtitleeffect.h
+C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/model/project.h
 C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/model/subtitlerenderer.h
 C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/video/videodecoder.h
 C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/video/videoexporter.h
@@ -689,6 +689,7 @@ C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/widgets/previewwidget.h
  mdp:C:/vcpkg/installed/x64-windows/include/Qt6/QtWidgets/qtwidgetsexports.h
  mdp:C:/vcpkg/installed/x64-windows/include/Qt6/QtWidgets/qtwidgetsglobal.h
  mdp:C:/vcpkg/installed/x64-windows/include/Qt6/QtWidgets/qwidget.h
+C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/video/previewdecoder.cpp
 C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/widgets/timelinewidget.h
  mmc:Q_OBJECT
  mdp:C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/audio/audiodecoder.h
@@ -871,10 +872,9 @@ C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/widgets/timelinewidget.h
  mdp:C:/vcpkg/installed/x64-windows/include/Qt6/QtWidgets/qtwidgetsexports.h
  mdp:C:/vcpkg/installed/x64-windows/include/Qt6/QtWidgets/qtwidgetsglobal.h
  mdp:C:/vcpkg/installed/x64-windows/include/Qt6/QtWidgets/qwidget.h
-C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/video/previewdecoder.cpp
 C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/app/mainwindow.cpp
-C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/audio/audiodecoder.cpp
 C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/main.cpp
+C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/audio/audiodecoder.cpp
 C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/audio/audioplayback.cpp
 C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/io/projectio.cpp
 C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/model/animationengine.cpp

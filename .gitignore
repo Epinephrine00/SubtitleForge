@@ -4,3 +4,4 @@ build-mac/
 CMakeUserPresets.json
 .cursor/
 testdata/
+*.zip

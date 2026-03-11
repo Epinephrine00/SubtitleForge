@@ -45,7 +45,7 @@ static const int kFps = 60;  // output fps only; timeline uses project.sourceFra
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
-    setWindowTitle("SubtitleForge");
+    setWindowTitle("Reels Forge");
     setupUi();
     setupMenus();
     connectSignals();
@@ -273,12 +273,12 @@ void MainWindow::onNewProject()
     refreshTimeline();
     m_preview->setCurrentFrame(0);
     m_preview->setVideoFrame(QImage());
-    setWindowTitle("SubtitleForge");
+    setWindowTitle("Reels Forge");
 }
 
 void MainWindow::onOpenProject()
 {
-    QString path = QFileDialog::getOpenFileName(this, "Open Project", {}, "SubtitleForge Project (*.sfproj)");
+    QString path = QFileDialog::getOpenFileName(this, "Open Project", {}, "Reels Forge Project (*.sfproj)");
     if (path.isEmpty()) return;
 
     Project p;
@@ -333,7 +333,7 @@ void MainWindow::onOpenProject()
     refreshTimeline();
     m_preview->setCurrentFrame(0);
     updatePreviewVideoFrame();
-    setWindowTitle(QString("SubtitleForge — %1").arg(path));
+    setWindowTitle(QString("Reels Forge — %1").arg(path));
 }
 
 void MainWindow::onSaveProject()
@@ -345,11 +345,11 @@ void MainWindow::onSaveProject()
 
 void MainWindow::onSaveProjectAs()
 {
-    QString path = QFileDialog::getSaveFileName(this, "Save Project", {}, "SubtitleForge Project (*.sfproj)");
+    QString path = QFileDialog::getSaveFileName(this, "Save Project", {}, "Reels Forge Project (*.sfproj)");
     if (path.isEmpty()) return;
     m_projectPath = path;
     onSaveProject();
-    setWindowTitle(QString("SubtitleForge — %1").arg(path));
+    setWindowTitle(QString("Reels Forge — %1").arg(path));
 }
 
 void MainWindow::onImportVideo()
