@@ -2,7 +2,7 @@
 
 A cross-platform subtitle generator that creates chroma-key-ready subtitle videos from audio/video files.
 
-> **This Project has Vibe-coded.**
+> **This Project has been Vibe-coded.**
 
 ## Features
 
