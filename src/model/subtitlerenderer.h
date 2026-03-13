@@ -19,6 +19,9 @@ private:
                                      const QFont &globalFont,
                                      float fontSize,
                                      const QColor &color,
+                                     bool outlineEnabled,
+                                     const QColor &outlineColor,
+                                     float outlineWidthPx,
                                      const InterpolatedParams &ip,
                                      int viewW, int viewH);
 

@@ -12,6 +12,9 @@ QJsonObject VideoTitle::toJson() const
     o["fontSize"]   = fontSize;
     o["color"]      = color.name(QColor::HexArgb);
     o["posY"]       = posY;
+    o["outlineEnabled"]   = outlineEnabled;
+    o["outlineColor"]     = outlineColor.name(QColor::HexArgb);
+    o["outlineWidthPx"]   = outlineWidthPx;
     return o;
 }
 
@@ -25,6 +28,9 @@ VideoTitle VideoTitle::fromJson(const QJsonObject &o)
     t.fontSize = static_cast<float>(o["fontSize"].toDouble(36));
     t.color    = QColor(o["color"].toString("#ffffffff"));
     t.posY     = static_cast<float>(o["posY"].toDouble(0));
+    t.outlineEnabled = o["outlineEnabled"].toBool(false);
+    t.outlineColor   = QColor(o["outlineColor"].toString("#ff000000"));
+    t.outlineWidthPx = static_cast<float>(o["outlineWidthPx"].toDouble(2.0));
     return t;
 }
 
@@ -96,6 +102,9 @@ void Project::clear()
     m_globalSubtitleFont = QFont("Arial");
     m_globalSubtitleFontSize = 48.0f;
     m_globalSubtitleColor = Qt::white;
+    m_globalSubtitleOutlineEnabled = false;
+    m_globalSubtitleOutlineColor = Qt::black;
+    m_globalSubtitleOutlineWidthPx = 2.0f;
     m_videoTitle = VideoTitle();
 }
 
@@ -124,6 +133,9 @@ QJsonObject Project::toJson() const
     o["globalSubtitleItalic"]  = m_globalSubtitleFont.italic();
     o["globalSubtitleFontSize"] = m_globalSubtitleFontSize;
     o["globalSubtitleColor"]   = m_globalSubtitleColor.name(QColor::HexArgb);
+    o["globalSubtitleOutlineEnabled"] = m_globalSubtitleOutlineEnabled;
+    o["globalSubtitleOutlineColor"]   = m_globalSubtitleOutlineColor.name(QColor::HexArgb);
+    o["globalSubtitleOutlineWidthPx"] = m_globalSubtitleOutlineWidthPx;
     o["videoTitle"]            = m_videoTitle.toJson();
     return o;
 }
@@ -146,6 +158,9 @@ Project Project::fromJson(const QJsonObject &o)
     p.m_globalSubtitleFont.setItalic(o["globalSubtitleItalic"].toBool(false));
     p.m_globalSubtitleFontSize = static_cast<float>(o["globalSubtitleFontSize"].toDouble(48));
     p.m_globalSubtitleColor = QColor(o["globalSubtitleColor"].toString("#ffffffff"));
+    p.m_globalSubtitleOutlineEnabled = o["globalSubtitleOutlineEnabled"].toBool(false);
+    p.m_globalSubtitleOutlineColor  = QColor(o["globalSubtitleOutlineColor"].toString("#ff000000"));
+    p.m_globalSubtitleOutlineWidthPx = static_cast<float>(o["globalSubtitleOutlineWidthPx"].toDouble(2.0));
 
     if (o.contains("videoTitle"))
         p.m_videoTitle = VideoTitle::fromJson(o["videoTitle"].toObject());

@@ -39,6 +39,9 @@ QImage SubtitleRenderer::renderSubtitleText(const QString &text,
                                             const QFont &globalFont,
                                             float fontSize,
                                             const QColor &color,
+                                            bool outlineEnabled,
+                                            const QColor &outlineColor,
+                                            float outlineWidthPx,
                                             const InterpolatedParams &ip,
                                             int /*viewW*/, int /*viewH*/)
 {
@@ -52,10 +55,10 @@ QImage SubtitleRenderer::renderSubtitleText(const QString &text,
     for (const auto &line : lines)
         textW = std::max(textW, fm.horizontalAdvance(line));
 
-    qreal lineH   = fm.height();
-    qreal textH   = lineH * lines.size();
-    qreal outline = std::max(1.0, font.pointSizeF() * 0.04);
-    int   pad     = static_cast<int>(std::ceil(outline * 2 + ip.blur + 4));
+    qreal lineH = fm.height();
+    qreal textH = lineH * lines.size();
+    qreal stroke = outlineEnabled && outlineWidthPx > 0 ? outlineWidthPx : 0;
+    int   pad   = static_cast<int>(std::ceil(stroke * 2 + ip.blur + 4));
 
     int imgW = static_cast<int>(std::ceil(textW)) + pad * 2;
     int imgH = static_cast<int>(std::ceil(textH)) + pad * 2;
@@ -74,9 +77,14 @@ QImage SubtitleRenderer::renderSubtitleText(const QString &text,
         y += lineH;
     }
 
-    painter.setPen(QPen(Qt::black, outline * 2,
-                       Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
-    painter.drawPath(path);
+    if (outlineEnabled && outlineWidthPx > 0) {
+        painter.setPen(QPen(outlineColor, outlineWidthPx * 2,
+                            Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
+        painter.setBrush(Qt::NoBrush);
+        painter.drawPath(path);
+    }
+    painter.setPen(Qt::NoPen);
+    painter.setBrush(color);
     painter.fillPath(path, color);
     painter.end();
 
@@ -95,7 +103,6 @@ void SubtitleRenderer::drawTitle(QPainter &painter,
     QFont font = title.font;
     font.setPointSizeF(title.fontSize);
     painter.setFont(font);
-    painter.setPen(title.color);
 
     QFontMetricsF fm(font);
     const QStringList lines = title.text.trimmed().split('\n');
@@ -103,11 +110,22 @@ void SubtitleRenderer::drawTitle(QPainter &painter,
     qreal totalH = lineH * lines.size();
     qreal y = (viewH - totalH) / 2.0 + title.posY + fm.ascent();
 
+    QPainterPath path;
     for (const auto &line : lines) {
         qreal x = (viewW - fm.horizontalAdvance(line)) / 2.0;
-        painter.drawText(QPointF(x, y), line);
+        path.addText(x, y, font, line);
         y += lineH;
     }
+
+    if (title.outlineEnabled && title.outlineWidthPx > 0) {
+        painter.setPen(QPen(title.outlineColor, title.outlineWidthPx * 2,
+                            Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
+        painter.setBrush(Qt::NoBrush);
+        painter.drawPath(path);
+    }
+    painter.setPen(Qt::NoPen);
+    painter.setBrush(title.color);
+    painter.drawPath(path);
 }
 
 // ---------------------------------------------------------------------------
@@ -163,12 +181,16 @@ QImage SubtitleRenderer::renderFrame(const Project &project,
     const QFont &globalFont = project.globalSubtitleFont();
     float globalFontSize = project.globalSubtitleFontSize();
     const QColor &globalColor = project.globalSubtitleColor();
+    bool subOutline = project.globalSubtitleOutlineEnabled();
+    const QColor &subOutlineColor = project.globalSubtitleOutlineColor();
+    float subOutlinePx = project.globalSubtitleOutlineWidthPx();
 
     for (const auto &[id, ip] : visible) {
         const SubtitleEntry *sub = project.subtitleById(id);
         if (!sub) continue;
 
-        QImage txt = renderSubtitleText(sub->text, globalFont, globalFontSize, globalColor, ip, width, height);
+        QImage txt = renderSubtitleText(sub->text, globalFont, globalFontSize, globalColor,
+                                        subOutline, subOutlineColor, subOutlinePx, ip, width, height);
 
         if (ip.blur > 0.5f)
             txt = applyBlur(txt, ip.blur);

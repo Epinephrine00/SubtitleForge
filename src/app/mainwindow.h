@@ -91,6 +91,9 @@ private:
     QCheckBox      *m_titleItalicCheck = nullptr;
     QSpinBox       *m_titlePosYSpin   = nullptr;
     class QPushButton *m_titleColorBtn = nullptr;
+    QCheckBox      *m_titleOutlineCheck = nullptr;
+    class QPushButton *m_titleOutlineColorBtn = nullptr;
+    QSpinBox       *m_titleOutlineWidthSpin = nullptr;
 
     QFontComboBox  *m_globalFontCombo = nullptr;
     QSpinBox       *m_globalFontSize  = nullptr;
@@ -98,6 +101,9 @@ private:
     QCheckBox      *m_globalItalicCheck = nullptr;
     QSpinBox       *m_globalPosYSpin   = nullptr;
     class QPushButton *m_globalColorBtn = nullptr;
+    QCheckBox      *m_globalOutlineCheck = nullptr;
+    class QPushButton *m_globalOutlineColorBtn = nullptr;
+    QSpinBox       *m_globalOutlineWidthSpin = nullptr;
 
     class QPushButton *m_trimStartBtn = nullptr;
     class QPushButton *m_trimEndBtn   = nullptr;
@@ -111,5 +117,7 @@ private:
     static const int kPreviewCacheMax = 8;
     qint64 m_currentFrame = 0;
     QColor m_globalSubtitleColor = Qt::white;
+    QColor m_globalSubtitleOutlineColor = Qt::black;
     QColor m_titleColor = Qt::white;
+    QColor m_titleOutlineColor = Qt::black;
 };

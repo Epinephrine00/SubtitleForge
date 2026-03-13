@@ -14,6 +14,9 @@ struct VideoTitle {
     float fontSize = 36.0f;
     QColor color = Qt::white;
     float posY = 0.0f;  // vertical offset from center (pixels)
+    bool outlineEnabled = false;
+    QColor outlineColor = Qt::black;
+    float outlineWidthPx = 2.0f;
 
     QJsonObject toJson() const;
     static VideoTitle fromJson(const QJsonObject &o);
@@ -43,6 +46,12 @@ public:
     void setGlobalSubtitleFontSize(float v) { m_globalSubtitleFontSize = v; }
     QColor globalSubtitleColor() const { return m_globalSubtitleColor; }
     void setGlobalSubtitleColor(const QColor &c) { m_globalSubtitleColor = c; }
+    bool globalSubtitleOutlineEnabled() const { return m_globalSubtitleOutlineEnabled; }
+    void setGlobalSubtitleOutlineEnabled(bool v) { m_globalSubtitleOutlineEnabled = v; }
+    QColor globalSubtitleOutlineColor() const { return m_globalSubtitleOutlineColor; }
+    void setGlobalSubtitleOutlineColor(const QColor &c) { m_globalSubtitleOutlineColor = c; }
+    float globalSubtitleOutlineWidthPx() const { return m_globalSubtitleOutlineWidthPx; }
+    void setGlobalSubtitleOutlineWidthPx(float v) { m_globalSubtitleOutlineWidthPx = v; }
 
     // Video title (shown from start to end)
     const VideoTitle &videoTitle() const { return m_videoTitle; }
@@ -93,6 +102,9 @@ private:
     QFont m_globalSubtitleFont;
     float m_globalSubtitleFontSize = 48.0f;
     QColor m_globalSubtitleColor = Qt::white;
+    bool m_globalSubtitleOutlineEnabled = false;
+    QColor m_globalSubtitleOutlineColor = Qt::black;
+    float m_globalSubtitleOutlineWidthPx = 2.0f;
     VideoTitle m_videoTitle;
     SubtitleEffect m_globalEffect;
     int m_nextId = 1;

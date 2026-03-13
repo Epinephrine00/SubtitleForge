@@ -137,6 +137,20 @@ void MainWindow::setupUi()
         QColor c = QColorDialog::getColor(m_globalSubtitleColor, this, "Subtitle Color");
         if (c.isValid()) { m_globalSubtitleColor = c; m_globalColorBtn->setStyleSheet(QString("background-color: %1; border:1px solid #555;").arg(c.name())); onGlobalSubtitleColorChanged(); }
     });
+    m_globalOutlineCheck = new QCheckBox("Outline");
+    connect(m_globalOutlineCheck, &QCheckBox::toggled, this, &MainWindow::onGlobalSubtitleFontChanged);
+    m_globalOutlineColorBtn = new QPushButton;
+    m_globalOutlineColorBtn->setFixedSize(28, 28);
+    m_globalOutlineColorBtn->setStyleSheet("background-color: black; border:1px solid #555;");
+    connect(m_globalOutlineColorBtn, &QPushButton::clicked, this, [this]() {
+        QColor c = QColorDialog::getColor(m_globalSubtitleOutlineColor, this, "Subtitle Outline Color");
+        if (c.isValid()) { m_globalSubtitleOutlineColor = c; m_globalOutlineColorBtn->setStyleSheet(QString("background-color: %1; border:1px solid #555;").arg(c.name())); onGlobalSubtitleFontChanged(); }
+    });
+    m_globalOutlineWidthSpin = new QSpinBox;
+    m_globalOutlineWidthSpin->setRange(0, 50);
+    m_globalOutlineWidthSpin->setSuffix(" px");
+    m_globalOutlineWidthSpin->setValue(2);
+    connect(m_globalOutlineWidthSpin, QOverload<int>::of(&QSpinBox::valueChanged), this, &MainWindow::onGlobalSubtitleFontChanged);
     subForm->addRow("Font:", m_globalFontCombo);
     subForm->addRow("Size:", m_globalFontSize);
     auto *subBoldItalic = new QHBoxLayout;
@@ -145,6 +159,9 @@ void MainWindow::setupUi()
     subForm->addRow(subBoldItalic);
     subForm->addRow("Vertical pos:", m_globalPosYSpin);
     subForm->addRow("Color:", m_globalColorBtn);
+    subForm->addRow("", m_globalOutlineCheck);
+    subForm->addRow("Outline color:", m_globalOutlineColorBtn);
+    subForm->addRow("Outline width:", m_globalOutlineWidthSpin);
     leftLayout->addWidget(subStyleGroup);
 
     // Video title
@@ -181,6 +198,20 @@ void MainWindow::setupUi()
         QColor c = QColorDialog::getColor(m_titleColor, this, "Title Color");
         if (c.isValid()) { m_titleColor = c; m_titleColorBtn->setStyleSheet(QString("background-color: %1; border:1px solid #555;").arg(c.name())); onVideoTitleChanged(); }
     });
+    m_titleOutlineCheck = new QCheckBox("Outline");
+    connect(m_titleOutlineCheck, &QCheckBox::toggled, this, &MainWindow::onVideoTitleChanged);
+    m_titleOutlineColorBtn = new QPushButton;
+    m_titleOutlineColorBtn->setFixedSize(28, 28);
+    m_titleOutlineColorBtn->setStyleSheet("background-color: black; border:1px solid #555;");
+    connect(m_titleOutlineColorBtn, &QPushButton::clicked, this, [this]() {
+        QColor c = QColorDialog::getColor(m_titleOutlineColor, this, "Title Outline Color");
+        if (c.isValid()) { m_titleOutlineColor = c; m_titleOutlineColorBtn->setStyleSheet(QString("background-color: %1; border:1px solid #555;").arg(c.name())); onVideoTitleChanged(); }
+    });
+    m_titleOutlineWidthSpin = new QSpinBox;
+    m_titleOutlineWidthSpin->setRange(0, 50);
+    m_titleOutlineWidthSpin->setSuffix(" px");
+    m_titleOutlineWidthSpin->setValue(2);
+    connect(m_titleOutlineWidthSpin, QOverload<int>::of(&QSpinBox::valueChanged), this, &MainWindow::onVideoTitleChanged);
     titleForm->addRow("Font:", m_titleFontCombo);
     titleForm->addRow("Size:", m_titleFontSize);
     auto *titleBoldItalic = new QHBoxLayout;
@@ -189,6 +220,9 @@ void MainWindow::setupUi()
     titleForm->addRow(titleBoldItalic);
     titleForm->addRow("Vertical pos:", m_titlePosYSpin);
     titleForm->addRow("Color:", m_titleColorBtn);
+    titleForm->addRow("", m_titleOutlineCheck);
+    titleForm->addRow("Outline color:", m_titleOutlineColorBtn);
+    titleForm->addRow("Outline width:", m_titleOutlineWidthSpin);
     titleLayout->addLayout(titleForm);
     leftLayout->addWidget(titleGroup);
 
@@ -318,6 +352,10 @@ void MainWindow::onOpenProject()
     m_globalPosYSpin->setValue(static_cast<int>(eff.focus.posY));
     m_globalSubtitleColor = m_project.globalSubtitleColor();
     m_globalColorBtn->setStyleSheet(QString("background-color: %1; border:1px solid #555;").arg(m_globalSubtitleColor.name()));
+    m_globalOutlineCheck->setChecked(m_project.globalSubtitleOutlineEnabled());
+    m_globalSubtitleOutlineColor = m_project.globalSubtitleOutlineColor();
+    m_globalOutlineColorBtn->setStyleSheet(QString("background-color: %1; border:1px solid #555;").arg(m_globalSubtitleOutlineColor.name()));
+    m_globalOutlineWidthSpin->setValue(static_cast<int>(m_project.globalSubtitleOutlineWidthPx()));
 
     m_titleEdit->blockSignals(true);
     m_titleEdit->setPlainText(m_project.videoTitle().text);
@@ -329,6 +367,10 @@ void MainWindow::onOpenProject()
     m_titlePosYSpin->setValue(static_cast<int>(m_project.videoTitle().posY));
     m_titleColor = m_project.videoTitle().color;
     m_titleColorBtn->setStyleSheet(QString("background-color: %1; border:1px solid #555;").arg(m_titleColor.name()));
+    m_titleOutlineCheck->setChecked(m_project.videoTitle().outlineEnabled);
+    m_titleOutlineColor = m_project.videoTitle().outlineColor;
+    m_titleOutlineColorBtn->setStyleSheet(QString("background-color: %1; border:1px solid #555;").arg(m_titleOutlineColor.name()));
+    m_titleOutlineWidthSpin->setValue(static_cast<int>(m_project.videoTitle().outlineWidthPx));
 
     refreshTimeline();
     m_preview->setCurrentFrame(0);
@@ -546,7 +588,11 @@ void MainWindow::onGlobalSubtitleFontChanged()
     m_project.setGlobalSubtitleFontSize(static_cast<float>(m_globalFontSize->value()));
     SubtitleEffect e = m_project.globalEffect();
     e.focus.posY = static_cast<float>(m_globalPosYSpin->value());
+    e.focus.fontSize = static_cast<float>(m_globalFontSize->value());
     m_project.setGlobalEffect(e);
+    m_project.setGlobalSubtitleOutlineEnabled(m_globalOutlineCheck->isChecked());
+    m_project.setGlobalSubtitleOutlineColor(m_globalSubtitleOutlineColor);
+    m_project.setGlobalSubtitleOutlineWidthPx(static_cast<float>(m_globalOutlineWidthSpin->value()));
     m_preview->update();
 }
 
@@ -566,6 +612,9 @@ void MainWindow::onVideoTitleChanged()
     t.fontSize = static_cast<float>(m_titleFontSize->value());
     t.posY = static_cast<float>(m_titlePosYSpin->value());
     t.color = m_titleColor;
+    t.outlineEnabled = m_titleOutlineCheck->isChecked();
+    t.outlineColor = m_titleOutlineColor;
+    t.outlineWidthPx = static_cast<float>(m_titleOutlineWidthSpin->value());
     m_project.setVideoTitle(t);
     m_preview->update();
 }
