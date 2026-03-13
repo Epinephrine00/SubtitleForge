@@ -441,7 +441,7 @@ void MainWindow::onImportTxt()
     QString content = QString::fromUtf8(f.readAll());
     f.close();
 
-    QStringList paragraphs = content.split("\n\n", Qt::SkipEmptyParts);
+    QStringList paragraphs = content.split("\n\n", Qt::KeepEmptyParts);
     if (paragraphs.isEmpty()) return;
 
     qint64 totalF = m_project.totalFrames();
@@ -453,7 +453,6 @@ void MainWindow::onImportTxt()
         SubtitleEntry e;
         e.id = m_project.nextSubtitleId();
         e.text = paragraphs[i].trimmed();
-        if (e.text.isEmpty()) continue;
         e.keyFrame = (totalF * i) / paragraphs.size();
         m_project.addSubtitle(e);
     }
