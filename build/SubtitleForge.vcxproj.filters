@@ -46,6 +46,9 @@
     <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\video\videoexporter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\video\premiereexporter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\io\projectio.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -100,6 +103,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\video\videoexporter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\video\premiereexporter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\io\projectio.h">

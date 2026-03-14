@@ -39,6 +39,7 @@ private slots:
     void onImportVideo();
     void onImportTxt();
     void onExportVideo();
+    void onExportPremiereXml();
 
     void onFrameChanged(qint64 frame);
     void onPlayPause();

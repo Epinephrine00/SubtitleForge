@@ -594,6 +594,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\video\videodecoder.cpp" />
     <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\video\previewdecoder.cpp" />
     <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\video\videoexporter.cpp" />
+    <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\video\premiereexporter.cpp" />
     <ClCompile Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\io\projectio.cpp" />
     <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\app\mainwindow.h" />
     <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\model\subtitle.h" />
@@ -608,6 +609,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\video\videodecoder.h" />
     <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\video\previewdecoder.h" />
     <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\video\videoexporter.h" />
+    <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\video\premiereexporter.h" />
     <ClInclude Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\src\io\projectio.h" />
     <None Include="C:\Users\dpvpd\source\reels-forge\SubtitleForge\resources\resources.qrc">
     </None>

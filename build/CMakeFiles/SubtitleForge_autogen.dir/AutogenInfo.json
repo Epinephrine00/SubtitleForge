@@ -394,6 +394,12 @@
 			null
 		],
 		[
+			"C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/video/premiereexporter.h",
+			"Mu",
+			"DWCH7LOILJ/moc_premiereexporter.cpp",
+			null
+		],
+		[
 			"C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/video/previewdecoder.h",
 			"Mu",
 			"DWCH7LOILJ/moc_previewdecoder.cpp",
@@ -639,6 +645,11 @@
 		],
 		[
 			"C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/model/subtitlerenderer.cpp",
+			"Mu",
+			null
+		],
+		[
+			"C:/Users/dpvpd/source/reels-forge/SubtitleForge/src/video/premiereexporter.cpp",
 			"Mu",
 			null
 		],

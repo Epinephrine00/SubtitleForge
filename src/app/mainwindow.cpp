@@ -3,6 +3,7 @@
 #include "widgets/previewwidget.h"
 #include "io/projectio.h"
 #include "video/videoexporter.h"
+#include "video/premiereexporter.h"
 #include "video/videodecoder.h"
 #include "video/previewdecoder.h"
 
@@ -90,6 +91,10 @@ void MainWindow::setupUi()
     btnExportVideo->setStyleSheet("font-weight: bold;");
     connect(btnExportVideo, &QPushButton::clicked, this, &MainWindow::onExportVideo);
     importLayout->addWidget(btnExportVideo);
+    auto *btnExportXml = new QPushButton("Export Premiere XML…");
+    btnExportXml->setStyleSheet("font-weight: bold;");
+    connect(btnExportXml, &QPushButton::clicked, this, &MainWindow::onExportPremiereXml);
+    importLayout->addWidget(btnExportXml);
     leftLayout->addWidget(importGroup);
 
     // Trim: set start/end from playhead
@@ -268,6 +273,7 @@ void MainWindow::setupMenus()
     file->addAction("Import &TXT…", this, &MainWindow::onImportTxt);
     file->addSeparator();
     file->addAction("&Export Video…", this, &MainWindow::onExportVideo, QKeySequence("Ctrl+E"));
+    file->addAction("Export &Premiere XML…", this, &MainWindow::onExportPremiereXml, QKeySequence("Ctrl+Shift+E"));
     file->addSeparator();
     file->addAction("E&xit", this, &QWidget::close, QKeySequence::Quit);
 }
@@ -508,6 +514,32 @@ void MainWindow::onExportVideo()
     } else {
         QMessageBox::information(this, "Export", "Export complete!");
     }
+}
+
+void MainWindow::onExportPremiereXml()
+{
+    if (m_project.totalFrames() <= 0) {
+        QMessageBox::information(this, "Export", "Import video and set trim first.");
+        return;
+    }
+
+    QString outPath = QFileDialog::getSaveFileName(
+        this, "Export Premiere XML", {},
+        "FCP7 XML (*.xml)");
+    if (outPath.isEmpty()) return;
+
+    QString err;
+    bool ok = PremiereXmlExporter::exportXml(m_project, outPath, &err);
+    if (!ok)
+        QMessageBox::warning(this, "Export",
+                             err.isEmpty() ? "Export failed." : err);
+    else
+        QMessageBox::information(this, "Export",
+                                 "Premiere XML exported!\n\n"
+                                 "In Premiere Pro: File > Import, select the XML file.\n"
+                                 "A new sequence will appear in your project.\n\n"
+                                 "Note: Background blur must be added manually in Premiere.\n"
+                                 "(V1 = background with opacity 35%, V2 = foreground)");
 }
 
 void MainWindow::pauseIfPlaying()

@@ -47,6 +47,7 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         "onImportVideo",
         "onImportTxt",
         "onExportVideo",
+        "onExportPremiereXml",
         "onFrameChanged",
         "frame",
         "onPlayPause",
@@ -90,58 +91,60 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onExportVideo'
         QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onExportPremiereXml'
+        QtMocHelpers::SlotData<void()>(9, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onFrameChanged'
-        QtMocHelpers::SlotData<void(qint64)>(9, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::LongLong, 10 },
+        QtMocHelpers::SlotData<void(qint64)>(10, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::LongLong, 11 },
         }}),
         // Slot 'onPlayPause'
-        QtMocHelpers::SlotData<void()>(11, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onStepForward'
         QtMocHelpers::SlotData<void()>(12, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onStepBackward'
+        // Slot 'onStepForward'
         QtMocHelpers::SlotData<void()>(13, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onStepForwardLarge'
+        // Slot 'onStepBackward'
         QtMocHelpers::SlotData<void()>(14, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onStepBackwardLarge'
+        // Slot 'onStepForwardLarge'
         QtMocHelpers::SlotData<void()>(15, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onStepBackwardLarge'
+        QtMocHelpers::SlotData<void()>(16, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onSubtitleSelected'
-        QtMocHelpers::SlotData<void(int)>(16, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::Int, 17 },
+        QtMocHelpers::SlotData<void(int)>(17, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 18 },
         }}),
         // Slot 'onSubtitleDeselected'
-        QtMocHelpers::SlotData<void()>(18, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(19, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onSubtitleMoved'
-        QtMocHelpers::SlotData<void(int, qint64)>(19, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::Int, 17 }, { QMetaType::LongLong, 20 },
+        QtMocHelpers::SlotData<void(int, qint64)>(20, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 18 }, { QMetaType::LongLong, 21 },
         }}),
         // Slot 'onDeleteSubtitle'
-        QtMocHelpers::SlotData<void(int)>(21, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::Int, 17 },
+        QtMocHelpers::SlotData<void(int)>(22, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 18 },
         }}),
         // Slot 'onGlobalSubtitleFontChanged'
-        QtMocHelpers::SlotData<void()>(22, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onGlobalSubtitleColorChanged'
         QtMocHelpers::SlotData<void()>(23, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onVideoTitleChanged'
+        // Slot 'onGlobalSubtitleColorChanged'
         QtMocHelpers::SlotData<void()>(24, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onVideoTitleChanged'
+        QtMocHelpers::SlotData<void()>(25, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onPreviewFrameDecoded'
-        QtMocHelpers::SlotData<void(qint64, QImage)>(25, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::LongLong, 26 }, { 0x80000000 | 27, 28 },
+        QtMocHelpers::SlotData<void(qint64, QImage)>(26, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::LongLong, 27 }, { 0x80000000 | 28, 29 },
         }}),
         // Slot 'onSetTrimStart'
-        QtMocHelpers::SlotData<void()>(29, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onSetTrimEnd'
         QtMocHelpers::SlotData<void()>(30, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onSetTrimEnd'
+        QtMocHelpers::SlotData<void()>(31, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onAudioPositionChanged'
-        QtMocHelpers::SlotData<void(qint64)>(31, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::LongLong, 10 },
+        QtMocHelpers::SlotData<void(qint64)>(32, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::LongLong, 11 },
         }}),
         // Slot 'onAudioDurationChanged'
-        QtMocHelpers::SlotData<void(qint64)>(32, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::LongLong, 33 },
+        QtMocHelpers::SlotData<void(qint64)>(33, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::LongLong, 34 },
         }}),
         // Slot 'onRefreshTick'
-        QtMocHelpers::SlotData<void()>(34, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(35, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -172,25 +175,26 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 4: _t->onImportVideo(); break;
         case 5: _t->onImportTxt(); break;
         case 6: _t->onExportVideo(); break;
-        case 7: _t->onFrameChanged((*reinterpret_cast<std::add_pointer_t<qint64>>(_a[1]))); break;
-        case 8: _t->onPlayPause(); break;
-        case 9: _t->onStepForward(); break;
-        case 10: _t->onStepBackward(); break;
-        case 11: _t->onStepForwardLarge(); break;
-        case 12: _t->onStepBackwardLarge(); break;
-        case 13: _t->onSubtitleSelected((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
-        case 14: _t->onSubtitleDeselected(); break;
-        case 15: _t->onSubtitleMoved((*reinterpret_cast<std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<qint64>>(_a[2]))); break;
-        case 16: _t->onDeleteSubtitle((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
-        case 17: _t->onGlobalSubtitleFontChanged(); break;
-        case 18: _t->onGlobalSubtitleColorChanged(); break;
-        case 19: _t->onVideoTitleChanged(); break;
-        case 20: _t->onPreviewFrameDecoded((*reinterpret_cast<std::add_pointer_t<qint64>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2]))); break;
-        case 21: _t->onSetTrimStart(); break;
-        case 22: _t->onSetTrimEnd(); break;
-        case 23: _t->onAudioPositionChanged((*reinterpret_cast<std::add_pointer_t<qint64>>(_a[1]))); break;
-        case 24: _t->onAudioDurationChanged((*reinterpret_cast<std::add_pointer_t<qint64>>(_a[1]))); break;
-        case 25: _t->onRefreshTick(); break;
+        case 7: _t->onExportPremiereXml(); break;
+        case 8: _t->onFrameChanged((*reinterpret_cast<std::add_pointer_t<qint64>>(_a[1]))); break;
+        case 9: _t->onPlayPause(); break;
+        case 10: _t->onStepForward(); break;
+        case 11: _t->onStepBackward(); break;
+        case 12: _t->onStepForwardLarge(); break;
+        case 13: _t->onStepBackwardLarge(); break;
+        case 14: _t->onSubtitleSelected((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
+        case 15: _t->onSubtitleDeselected(); break;
+        case 16: _t->onSubtitleMoved((*reinterpret_cast<std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<qint64>>(_a[2]))); break;
+        case 17: _t->onDeleteSubtitle((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
+        case 18: _t->onGlobalSubtitleFontChanged(); break;
+        case 19: _t->onGlobalSubtitleColorChanged(); break;
+        case 20: _t->onVideoTitleChanged(); break;
+        case 21: _t->onPreviewFrameDecoded((*reinterpret_cast<std::add_pointer_t<qint64>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QImage>>(_a[2]))); break;
+        case 22: _t->onSetTrimStart(); break;
+        case 23: _t->onSetTrimEnd(); break;
+        case 24: _t->onAudioPositionChanged((*reinterpret_cast<std::add_pointer_t<qint64>>(_a[1]))); break;
+        case 25: _t->onAudioDurationChanged((*reinterpret_cast<std::add_pointer_t<qint64>>(_a[1]))); break;
+        case 26: _t->onRefreshTick(); break;
         default: ;
         }
     }
@@ -215,14 +219,14 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 26)
+        if (_id < 27)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 26;
+        _id -= 27;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 26)
+        if (_id < 27)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 26;
+        _id -= 27;
     }
     return _id;
 }

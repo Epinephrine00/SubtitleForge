@@ -73,6 +73,7 @@ set(SOURCES
     src/video/videodecoder.cpp
     src/video/previewdecoder.cpp
     src/video/videoexporter.cpp
+    src/video/premiereexporter.cpp
     src/io/projectio.cpp
 )
 
@@ -90,6 +91,7 @@ set(HEADERS
     src/video/videodecoder.h
     src/video/previewdecoder.h
     src/video/videoexporter.h
+    src/video/premiereexporter.h
     src/io/projectio.h
 )
 
